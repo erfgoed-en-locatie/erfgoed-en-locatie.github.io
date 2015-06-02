@@ -14,7 +14,7 @@ In oude bronnen kom je soms plaatsnamen tegen waar je als mens toch even over na
 
 Dankzij datasets als de rekeningen van de Illustre Lieve Vrouwe Broederschap, Militieregisters en het herkomstonderzoek van Simon Hart kent ErfGeo tienduizenden plaatsnaamvarianten. Alleen voor Zierikzee zijn het er al bijna twintig. Omdat we uit veel bronnen ook de periode kunnen halen waarin een naamvariant gebruikt werd, kan je mooi zien [wanneer](http://www.islandsofmeaning.nl/projects/names-in-time/?uri=http://vocab.getty.edu/tgn/7030107) welke variant in zwang was.
 
-![Ziericzee](ziericzee.png)
+![Ziericzee](images/ziericzee.png)
 
 
 ##2) De groei van Zwolle tussen 1200 en 2010
@@ -23,7 +23,7 @@ De Atlas van de verstedelijking in Nederland toont van de 35 grootste steden van
 
 Van [Zwolle](http://geothesaurus.nl/hgconcept/tgn/7007077) zijn bijvoorbeeld geometrieën uit 1200, 1350, 1500, 1650, 1900, 1950, 1980 en 2010 beschikbaar.
 
-![Zwolle](zwolle.png)
+![Zwolle](images/zwolle.png)
 
 ##3) Departementen uit de Franse Tijd
 
@@ -31,7 +31,7 @@ In de Franse tijd is ook Nederland kortstondig ingedeeld in departementen. Bij e
 
 Behalve de ligging der departementen laten [de geometrieën](http://histograph.io/viewer/#search=* type=hg:Departement) ook mooi de toenmalige kustlijn zien. Zo zie je in de kop van departement Zuiderzeé het eiland Wieringen nog liggen.
 
-![departementen](departementen.png)
+![departementen](images/departementen.png)
 
 ##4) Overstroming, overstuiving, ontvolking en oorlog
 
@@ -39,7 +39,7 @@ In de loop der eeuwen zijn veel dorpen en zelfs steden verdwenen. Veelal door ov
 
 Bijna 600 verdwenen dorpen zijn door Bert Stulp ten boek gesteld, en deze plaatsen zijn ook terug te vinden in ErfGeo.
 
-![Saeftinghe](saeftinge.png)
+![Saeftinghe](images/saeftinge.png)
 
 ##5) Van Abcoude naar De Ronde Venen - twee eeuwen gemeentelijke herindelingen
 
@@ -57,7 +57,7 @@ Het Nationaal Wegenbestand, dat alle straten van Nederland bevat, is in ErfGeo o
 
 Ook hier geldt dat we zo een basis hebben waaraan we historische straatnamen kunnen verbinden.
 
-![Nationaal Wegenbestand](nwb.png)
+![Nationaal Wegenbestand](images/nwb.png)
 
 ##8) Huidig Nederland: gebouwen en adressen
 
