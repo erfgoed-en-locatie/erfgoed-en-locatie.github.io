@@ -10,3 +10,7 @@ defaults:
 collections:
   wat-hoe:
     output: true
+  nieuws:
+    output: false
+  tools:
+    output: true
