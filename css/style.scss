@@ -98,18 +98,35 @@ body {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding:0;
+  background-color:#F5F5F3;
+}
+
+header, h1{
+  font-family:"Roboto Condensed";
 }
 
 header{
   background-color:#6bc6de;
   margin-top:0;
-  font-family:"Roboto Condensed";
   font-size:16px;
   color:#fff;
+  margin-bottom:40px;
 }
 
 header .row{
   margin-bottom:0;
+}
+
+.home-blocks div.six{
+  background-color:#fff;
+  margin-bottom:40px;
+  box-shadow: #ccc 2px 2px 14px 0px;
+  padding:20px;
+}
+
+.home-blocks h1{
+  color:#6bc6de;
+  font-size:24px;
 }
 
 .table-container {
@@ -129,7 +146,15 @@ header .row{
 
 #footer {
   /* Placeholder footer styles */
+  background-color:#fff;
+  padding-top:20px;
+  padding-bottom:20px;
+  font-size:12px;
   text-align: center;
+}
+
+#footer a{
+  text-decoration:none;
 }
 
 #logo {
@@ -137,8 +162,38 @@ header .row{
   font-size:24px;
   font-weight:300;
 }
-#logo span{
+#logo span, header h1 span{
   font-weight:700;
+}
+
+header h1{
+  font-weight:300;
+  font-size:72px;
+}
+
+#mission{
+  padding-top:40px;
+  padding-bottom:30px;
+}
+
+#mission h1{
+  margin-bottom:0px;
+}
+
+#mission h2{
+  font-size:32px;
+  margin-bottom:6px;
+  color:#000;
+}
+
+#mission .six{
+  padding-top:2px;
+}
+
+#mission p{
+  font-size:20px;
+  margin-bottom:16px;
+  margin-top:16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -248,6 +303,7 @@ nav #github-nav:hover {
   opacity: 0.8;
   transition: opacity 0.5s ease-in-out;
 }
+
 
 body > div > div > p > a > img {
   width: 822px;
