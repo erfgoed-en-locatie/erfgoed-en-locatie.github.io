@@ -1,8 +1,7 @@
 ---
 title: Histodraw
-introduction: Draw shapes and get geoJSON
+introduction: teken vormen en exporteer naar geoJSON
 layout: histodraw
 ---
 
-
-<iframe src="http://erfgeo.nl/histodraw" width="100%;" height="400px;" />
+er is een histo gedrawt
