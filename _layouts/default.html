@@ -15,35 +15,49 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
 </head>
 <body>
+
   <div class="table-container">
+
     <div class="table-block footer-push">
+
       {% if !page.altHeader %}
         {% include alternateHeader.html %}
       {% else %}
         {% include header.html %}
       {% endif %}
-      <!-- Primary Page Layout
-           –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
       <div class="container">
+
         <div class="row">
+
           <div class="two-third column">
+
             {{ page.title }}
             {{ content }}
+          
           </div>
+        
         </div>
-      </div>  <!-- end primary div.container -->
-    </div> <!-- end primary div.table-block -->
-
+      
+      </div>
+    
+    </div>
 
     <div class="table-block">
+         
+      <div class="container">
 
-    <!-- Page Footer Layout
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container">
-      <footer id="footer" class="twelve columns">
-        {% include footer.html %}
-      </footer>
-    </div> <!-- end footer div.container -->
-  </div>  <!-- end footer div.table-block -->
+        <footer id="footer" class="twelve columns">
+
+          {% include footer.html %}
+
+        </footer>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </body>
 </html>
