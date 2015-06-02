@@ -84,6 +84,9 @@ $bigger-margin: 2rem;
   font-style: italic;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:700,300,400);
+
+
 /* Style
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -94,8 +97,20 @@ html, body {
 body {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
+  padding:0;
 }
 
+header{
+  background-color:#6bc6de;
+  margin-top:0;
+  font-family:"Roboto Condensed";
+  font-size:16px;
+  color:#fff;
+}
+
+header .row{
+  margin-bottom:0;
+}
 
 .table-container {
   display: table;
@@ -118,8 +133,12 @@ body {
 }
 
 #logo {
-  height: 90px;
-  padding-right: 20px;
+  margin-top:22px;
+  font-size:24px;
+  font-weight:300;
+}
+#logo span{
+  font-weight:700;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -161,9 +180,6 @@ a:active, a:focus {
 }
 
 nav {
-  margin-top: $big-margin;
-	margin-bottom: $big-margin;
-  font-weight: 500;
 }
 
 .row.no-bottom-margin {
@@ -177,7 +193,26 @@ nav {
 header a,
 header a:visited {
   text-decoration: none;
-  color: $brand-color;
+  color: #fff;
+}
+
+#mainmenu{
+  float:right;
+  padding-top:6px;
+}
+
+.delimiter{
+  width:10px;
+  height:10px;
+  margin-left:10px;
+  margin-right:10px;
+  border-radius:100%;
+  background-color:#fff;
+  display:inline-block;
+}
+
+.delimiter:last-child{
+  display:none;
 }
 
 header a.menu-item:hover,
@@ -185,13 +220,12 @@ header a.menu-item.current {
   border-bottom-width: 3px;
   border-bottom-color: $brand-color;
   border-bottom-style: solid;
-  color: $brand-color;
+  color: #000;
 }
 
 header ul {
   margin: 2px 0 0;
   padding: 0;
-  font-size: 1.5rem;
   list-style-type: none;
   float: right;
 }

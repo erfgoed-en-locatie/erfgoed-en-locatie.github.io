@@ -4,14 +4,16 @@
       <div class="row">
         <div class="two columns">
           <a href="{{ site.baseurl }}/" id="logo">
-            erfgeo
+            <span>Erf</span>Geo</a>
           </a>
         </div>
         <div class="ten columns">
-          “{{ site.data.style.slogan }}”
-          <ul>
+        “{{ site.data.style.slogan }}”
+          <div id="mainmenu">
+          
+          
             {% for item in site.data.menu %}
-            <li>
+            
               {% assign url = page.url | replace_first:'/','' | split:"/" | first %}
               {% if item.name == url %}
               <a class="menu-item current" href="{{ site.baseurl }}/{{ item.name }}">
@@ -22,10 +24,10 @@
                   <a class="menu-item" href="{{ site.baseurl }}/{{ item.name }}">
                 {% endif %}
               {% endif %}
-                {{item.title}}</a>
-            </li>
+                {{item.title}}</a><span class="delimiter"></span>
+            
             {% endfor %}
-          </ul>
+          </div>
         </div>
       </div>
     </div>
