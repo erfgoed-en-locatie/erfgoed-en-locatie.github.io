@@ -5,8 +5,8 @@
 - name: nieuws
   title: Nieuws
 
-- name: tools
-  title: Tools
-
 - name: wat-hoe
   title: Wat? Hoe?
+
+- name: tools
+  title: Tools
