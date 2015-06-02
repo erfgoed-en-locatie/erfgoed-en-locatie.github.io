@@ -1,0 +1,30 @@
+<header>
+  <nav>
+    <div class="container">
+      <div class="row">
+        <div class="two columns">
+          <a href="{{ site.baseurl }}/" id="logo">
+            <img src="{{ site.baseurl }}/images/histograph.svg" width="100px">
+          </a>
+        </div>
+        <div class="ten columns">
+          dit is de alto header yo
+          <ul>
+            {% for item in site.data.menu %}
+            <li>
+              {% assign url = page.url | replace_first:'/','' | split:"/" | first %}
+              {% if item.name == url %}
+              <a class="menu-item current" href="{{ site.baseurl }}/{{ item.name }}">
+              {% else %}
+              <a class="menu-item" href="{{ site.baseurl }}/{{ item.name }}">
+              {% endif %}
+                {{item.title}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
