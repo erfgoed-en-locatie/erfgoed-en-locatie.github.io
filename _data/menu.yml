@@ -1,5 +1,6 @@
-- name: thesaurus
+- name: http://thesaurus.erfgeo.nl
   title: Thesaurus
+  notLocal: true
 
 - name: nieuws
   title: Nieuws

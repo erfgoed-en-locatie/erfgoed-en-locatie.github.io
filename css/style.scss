@@ -87,9 +87,34 @@ $bigger-margin: 2rem;
 /* Style
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 30px 0;
+  margin: 0;
+}
+
+
+.table-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.table-block {
+  display: table-row;
+  height: 1px;
+}
+
+.footer-push {
+  height: auto;
+}
+
+#footer {
+  /* Placeholder footer styles */
+  text-align: center;
 }
 
 #logo {
@@ -119,10 +144,6 @@ table.no-borders tbody tr:first-child {
 
 table.no-borders tr.border-bottom {
   border-bottom: 1px solid black;
-}
-
-#architecure svg {
-  width: 960px;
 }
 
 a {
