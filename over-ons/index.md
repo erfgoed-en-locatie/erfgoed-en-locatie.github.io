@@ -25,4 +25,3 @@ wil jij contact met ons?
 als je hier echt helemaal zeker van bent stuur dan een email naar:
 
 email adres verborgen vanwege jouw spam
-
