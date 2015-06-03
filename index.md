@@ -1,5 +1,6 @@
 ---
 altHeader: true
+layout: "home"
 ---
 
 

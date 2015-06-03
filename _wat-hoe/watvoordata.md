@@ -66,9 +66,3 @@ We richten ons op Nederland, maar de Nederlandse geschiedenis houdt natuurlijk n
 ##10) Carnaval!
 
 schimpnamen, meertens en kloeke
-
-_____________
-
-
-
-#De factor tijd toevoegen aan ErfGeo - tien voorbeelden

@@ -101,8 +101,12 @@ body {
   background-color:#F5F5F3;
 }
 
-header, h1{
+header, h1, h2{
   font-family:"Roboto Condensed";
+}
+
+h2{
+  font-size:36px;
 }
 
 header{
@@ -127,6 +131,10 @@ header .row{
 .home-blocks h1{
   color:#6bc6de;
   font-size:24px;
+}
+
+#content img{
+  width:100%;
 }
 
 .table-container {
