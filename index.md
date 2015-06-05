@@ -6,8 +6,8 @@ layout: "home"
 <div class="row" class="home-blocks">
         
 	<div class="six columns">
-		<h1 style="margin-bottom: 10px;">Thesaurus</h1>
-		<p style="margin-bottom: 20px;">De thesaurus is lorem ipsum dolor via quaternion ambular conteccio</p>
+		<a href="http://geothesaurus.nl/"><h1 style="margin-bottom: 10px;">Thesaurus</h1></a>
+		<p style="margin-bottom: 4px;">De thesaurus is lorem ipsum dolor via quaternion ambular conteccio</p>
 		<label>
 			Zoek een PIT in de thesaurus
 			<input placeholder="bijv. kerkstraat" data-keyuphandler="thesaurusSearch" style="margin-top: 10px; width: 415px"/>
@@ -15,7 +15,7 @@ layout: "home"
 	</div>
 
 	<div class="six columns">
-		<h1>Wat? Hoe?</h1>
+		<a href="/wat-hoe/index.html"><h1>Wat? Hoe?</h1></a><br>
 		{% for item in site.wat-hoe %}
 		  <a href="{{ item.url }}">{{ item.title }}</a><br />
 		{% endfor %}
@@ -26,12 +26,18 @@ layout: "home"
 <div class="row" class="home-blocks">
         
 	<div class="six columns">
-		<h1>Nieuws</h1>
+		<a href="/nieuws/index.html"><h1>Nieuws</h1></a>
 	</div>
 
 	<div class="six columns">
-		<h1>Tools</h1>
-	
+		<a href="/tools/index.html"><h1>Tools</h1></a><br>
+		{% for item in site.tools %}
+		  {% if item.customUrl %}
+		  	<a href="{{ item.customUrl }}">{{ item.title }}</a><br />
+		  {% else %}
+		  	<a href="{{ item.url }}">{{ item.title }}</a><br />
+		  {% endif %}
+		{% endfor %}
 	</div>
 
 </div>
