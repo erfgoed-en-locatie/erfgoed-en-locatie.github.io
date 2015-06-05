@@ -12,7 +12,9 @@ layout: "home"
 
 	<div class="six columns">
 		<h1>Wat? Hoe?</h1>
-	
+		{% for item in site.wat-hoe %}
+		  <a href="{{ item.url }}">{{ item.title }}</a><br />
+		{% endfor %}
 	</div>
 
 </div>
