@@ -6,6 +6,7 @@ layout: "home"
 <div class="row" class="home-blocks">
         
 	<div class="six columns">
+
 		<h1 style="margin-bottom: 10px;">Thesaurus</h1>
 		<div id="searchbox">
 		<p>Zoek een plaats, gemeente, straat, etc.</p>
@@ -26,6 +27,7 @@ layout: "home"
 	<div class="six columns">
 		<h1>Wat? Hoe?</h1>
 		{% for item in site.wat-hoe limit:2 %}
+
 		  <a href="{{ item.url }}">{{ item.title }}</a><br />
 		{% endfor %}
 
@@ -37,6 +39,7 @@ layout: "home"
 <div class="row" class="home-blocks">
         
 	<div class="six columns">
+
 		<h1>Nieuws</h1>
 
 		{% for post in site.posts %}
@@ -49,8 +52,14 @@ layout: "home"
 	</div>
 
 	<div class="six columns">
-		<h1>Tools</h1>
-	
+		<a href="/tools/index.html"><h1>Tools</h1></a><br>
+		{% for item in site.tools %}
+		  {% if item.customUrl %}
+		  	<a href="{{ item.customUrl }}">{{ item.title }}</a><br />
+		  {% else %}
+		  	<a href="{{ item.url }}">{{ item.title }}</a><br />
+		  {% endif %}
+		{% endfor %}
 	</div>
 
 </div>
