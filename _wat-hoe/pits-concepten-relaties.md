@@ -1,6 +1,5 @@
 ---
-title: Data toevoegen aan ErfGeo
-excerpt: Erfgoedinstellingen kunnen zelf een dataset met PiTs maken en aanleveren. Maar hoe maak je zo'n dataset?
+title: PiTs, Concepten en Relaties
 ---
 
 In een [vorig artikel](/wat-hoe/watvoordata.html) hebben we gezien wat voor data er in ErfGeo zit. Maar hoe voeg je er data aan toe? Of, specifieker, hoe voeg je er temporele gegevens aan toe?
@@ -8,6 +7,8 @@ In een [vorig artikel](/wat-hoe/watvoordata.html) hebben we gezien wat voor data
 Erfgoedinstellingen kunnen zelf een dataset met PiTs maken en aanleveren. Een medewerker van ErfGeo controleert en importeert de data vervolgens.
 
 Dit artikel geeft een aantal voorbeelden van PiTs die je in zo'n dataset op kan nemen.
+
+
 
 
 ##Aanleg van een bestaande straat dateren
@@ -26,10 +27,6 @@ Wat wel mogelijk is, is een PiT maken in een eigen dataset. Als we die een relat
 		<td>Wevershof</td>
 	</tr>
 	<tr>
-		<th>type</th>
-		<td>hg:Street</td>
-	</tr>
-	<tr>
 		<th>sameHgConcept</th>
 		<td>nwb/de-rijp-wevershof</td>
 	</tr>
@@ -40,7 +37,7 @@ Wat wel mogelijk is, is een PiT maken in een eigen dataset. Als we die een relat
 </table>
 
 
-Elke PiT die we maken moet een binnen de dataset uniek id, een naam en een type hebben. Met de laatste twee waarden in het voorbeeld hierboven zeggen we dat de straat die de nieuwe PiT beschrijft dezelfde is als het Wevershof in het Nationaal Wegenbestand en dat de straat ontstaan is in 1971.
+
 
 
 ##Een historische straatnaam toevoegen
@@ -59,10 +56,6 @@ Met een PiT die de volgende velden bevat kunnen we die informatie toevoegen:
 		<td>Noorderstraat</td>
 	</tr>
 	<tr>
-		<th>type</th>
-		<td>hg:Street</td>
-	</tr>
-	<tr>
 		<th>isUsedFor</th>
 		<td>nwb/de-rijp-t-achterom</td>
 	</tr>
@@ -79,7 +72,7 @@ Met een PiT die de volgende velden bevat kunnen we die informatie toevoegen:
 
 Ontginning van veen zorgde ervoor dat in de 12e eeuw het riviertje De Bamestra uitgroeide tot een binnenzee, een meer dat in open verbinding stond met de Zuiderzee. Begin 17e eeuw werd het meer drooggemaakt.
 
-Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, maken we er eentje aan. En we geven de nieuwe PiT een geometrie. Een geometrie kan een punt, een lijn of een polygoon zijn. Een punt mag als twee velden (lengte- en breedtegraad) meegeleverd worden, in de andere gevallen is het verplicht geojson aan te leveren. De tool <a href="/tools/histodraw.html">Histodraw</a> maakt dat een relatief eenvoudige exercitie.
+Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, hebben we nog geen bestaande Beemstermeer PiT om naar te verwijzen. Daarom geven we ook een geometrie mee. Een geometrie kan een punt, een lijn of een polygoon zijn. Een punt mag als twee velden (lengte- en breedtegraad) meegeleverd worden, in de andere gevallen is het verplicht geojson aan te leveren. Het tooltje Histodraw maakt dat een relatief eenvoudige exercitie.
 
 <table>
 	<tr>
@@ -89,10 +82,6 @@ Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, maken we er eentje aan. En 
 	<tr>
 		<th>name</th>
 		<td>Beemstermeer</td>
-	</tr>
-	<tr>
-		<th>type</th>
-		<td>hg:Water</td>
 	</tr>
 	<tr>
 		<th>hasBeginning</th>
@@ -126,10 +115,6 @@ Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfG
 		<td>De Rijp</td>
 	</tr>
 	<tr>
-		<th>type</th>
-		<td>hg:Place</td>
-	</tr>
-	<tr>
 		<th>sameHgConcept</th>
 		<td>tgn/1047707</td>
 	</tr>
@@ -151,10 +136,6 @@ Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfG
 		<td>Midden-Beemster</td>
 	</tr>
 	<tr>
-		<th>type</th>
-		<td>hg:Place</td>
-	</tr>
-	<tr>
 		<th>sameHgConcept</th>
 		<td>http://vocab.getty.edu/tgn/1047948</td>
 	</tr>
@@ -164,41 +145,4 @@ Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfG
 	</tr>
 </table>
 
-##Een gemeentelijke herindeling: Graft-De Rijp 'absordbedBy' Alkmaar
-
-Op 1 januari 2015 is de gemeente Graft-De Rijp opgegaan in de gemeente Alkmaar. Deze gemeentelijke herindeling is blijkbaar nog niet verwerkt in de door ErfGeo gebruikte datasets. Maar we kunnen zelf een PiT aanmaken die deze gemeentelijke herindeling beschrijft.
-
-Met de sameHgConcept relatie koppelen we de nieuwe PiT aan de bestaande gemeente Graft-De Rijp PiT's, en met de absorbedBy relatie vertellen we dat de gemeente op haar einddatum is opgegaan in Alkmaar.
-
-<table>
-	<tr>
-		<th>id</th>
-		<td>7</td>
-	</tr>
-	<tr>
-		<th>name</th>
-		<td>Graft-De Rijp</td>
-	</tr>
-	<tr>
-		<th>type</th>
-		<td>hg:Municipality</td>
-	</tr>
-	<tr>
-		<th>hasBeginning</th>
-		<td>1970</td>
-	</tr>
-	<tr>
-		<th>hasEnd</th>
-		<td>2015-01-01</td>
-	</tr>
-	<tr>
-		<th>sameHgConcept</th>
-		<td>http://www.gemeentegeschiedenis.nl/gemeentenaam/Graft-De_Rijp</td>
-	</tr>
-	<tr>
-		<th>absorbedBy</th>
-		<td>http://www.gemeentegeschiedenis.nl/gemeentenaam/Alkmaar</td>
-	</tr>
-</table>
-
-Bovenstaande informatie is allemaal terug te vinden in <a href="/assets/examples/voorbeelden-menno.csv">dit csv-bestand</a>, waarmee ik de dataset op ErfGeo heb aangemaakt.
+## 

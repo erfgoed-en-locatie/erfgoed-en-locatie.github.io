@@ -7,18 +7,29 @@ layout: "home"
         
 	<div class="six columns">
 		<h1 style="margin-bottom: 10px;">Thesaurus</h1>
-		<p style="margin-bottom: 20px;">De thesaurus is lorem ipsum dolor via quaternion ambular conteccio</p>
-		<label>
-			Zoek een PIT in de thesaurus
-			<input placeholder="bijv. kerkstraat" data-keyuphandler="thesaurusSearch" style="margin-top: 10px; width: 415px"/>
-		</label>
+		<div id="searchbox">
+		<p>Zoek een plaats, gemeente, straat, etc.</p>
+			<div class="row">
+				<div class="eight columns">
+				<label>
+					
+					<input type="text" class="u-full-width" id="searchstring" placeholder="bijv. kerkstraat" data-keyuphandler="thesaurusSearch" style="margin-top: 10px;"/>
+				</label>
+				</div>
+				<div class="four columns">
+					<button class="button-primary" onclick="search();">Zoek</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="six columns">
 		<h1>Wat? Hoe?</h1>
-		{% for item in site.wat-hoe %}
+		{% for item in site.wat-hoe limit:2 %}
 		  <a href="{{ item.url }}">{{ item.title }}</a><br />
 		{% endfor %}
+
+		<a href="/wat-hoe/">&gt;&gt; meer</a>
 	</div>
 
 </div>
@@ -27,6 +38,14 @@ layout: "home"
         
 	<div class="six columns">
 		<h1>Nieuws</h1>
+
+		{% for post in site.posts %}
+		  <a href="{{ post.url }}">
+		    <h2>{{ post.title }}</h2>
+		  </a>
+		  {{ post.content }}
+		{% endfor %}
+
 	</div>
 
 	<div class="six columns">
@@ -60,4 +79,9 @@ layout: "home"
 	}
 
 	document.addEventListener('keyup', genericKeyHandler);
+
+	function search(){
+		var searchstring = document.getElementById('searchstring').value;
+		location.href = 'http://histograph.io/viewer/#search=' + searchstring;
+	}
 </script>

@@ -99,10 +99,10 @@ body {
   margin: 0;
   padding:0;
   background-color:#F5F5F3;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-header, h1, h2{
+header, h1, h2, h3{
   font-family:"Roboto Condensed";
 }
 
@@ -112,6 +112,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h2{
   font-size:36px;
+}
+h3{
+  font-size: 28px;
+  margin-bottom: 8px;
 }
 
 header{
@@ -126,7 +130,7 @@ header .row{
   margin-bottom:0;
 }
 
-.home-blocks div.six{
+.home-blocks div.six, .content-block{
   background-color:#fff;
   margin-bottom:40px;
   box-shadow: #ccc 2px 2px 14px 0px;
@@ -144,6 +148,19 @@ header .row{
 .home-blocks h1{
   color:#6bc6de;
   font-size:24px;
+}
+
+.home-blocks #searchbox{
+  background-image:url(../images/dwingeloo.png);
+  padding: 20px 10px 0 10px;
+}
+
+.home-blocks #searchbox button{
+  margin-top: 10px;
+}
+
+.home-blocks .row{
+  margin-bottom: 0;
 }
 
 #content img{
@@ -253,7 +270,13 @@ a:active, a:focus {
   -moz-outline-style:none;
 }
 
-nav {
+button.button-primary{
+  background-color:#6bc6de;
+  border-color:#6bc6de;
+}
+button.button-primary:hover{
+  background-color:#000;
+  border-color:#000;
 }
 
 .row.no-bottom-margin {
