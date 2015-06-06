@@ -1,5 +1,6 @@
 ---
 title: Wat voor data vind je in ErfGeo?
+excerpt: Om uit te leggen wat ErfGeo is, is het wellicht het handigst om te tonen wat voor data er in ErfGeo te vinden is.
 ---
 
 Wat ErfGeo is, laat zich het best uitleggen door de data die het bevat.

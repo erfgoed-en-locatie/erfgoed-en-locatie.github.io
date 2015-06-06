@@ -14,7 +14,7 @@ layout: "home"
 				<div class="eight columns">
 				<label>
 					
-					<input type="text" class="u-full-width" id="searchstring" placeholder="bijv. kerkstraat" data-keyuphandler="thesaurusSearch" style="margin-top: 10px;"/>
+					<input type="text" class="u-full-width" id="searchstring" placeholder="bijv. spaarndam" data-keyuphandler="thesaurusSearch" style="margin-top: 10px;"/>
 				</label>
 				</div>
 				<div class="four columns">

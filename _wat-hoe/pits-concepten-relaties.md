@@ -1,148 +1,26 @@
 ---
-title: PiTs, Concepten en Relaties
+title: PiTs, HgConcepten en Relaties
+excerpt: Wat zijn toch die fameuze PiTs? En hoe worden hgConcepten samengesteld? Hoe zit, kortom, de ErfGeo data in elkaar?
 ---
 
-In een [vorig artikel](/wat-hoe/watvoordata.html) hebben we gezien wat voor data er in ErfGeo zit. Maar hoe voeg je er data aan toe? Of, specifieker, hoe voeg je er temporele gegevens aan toe?
+ErfGeo bevat data uit vele bronnen. Elk van die bronnen kan informatie bevatten over een bepaalde straat, plaats, etc. Zo'n beschrijving van één zo'n plaats of straat in één dataset noemen we een PiT.
 
-Erfgoedinstellingen kunnen zelf een dataset met PiTs maken en aanleveren. Een medewerker van ErfGeo controleert en importeert de data vervolgens.
+##Plaats in Tijd (PiT)
 
-Dit artikel geeft een aantal voorbeelden van PiTs die je in zo'n dataset op kan nemen.
+Een Plaats in Tijd, of Place in Time zo u wilt, beschrijft dus een straat, plaats, adres, gebouw, departement, etc. Elke PiT heeft een in ieder geval een `id`, een `name` en een `type`, en kan verder een `geometry`, een startdatum (`hasBeginning`), een einddatum (`hasEnd`) en een `uri` bevatten.
 
+Meer dan bronnen met PiTs zit er niet in ErfGeo. Vaak zijn er meerdere PiTs die dezelfde plaats beschrijven. Een plaats als Amsterdam wordt door tientallen PiTs beschreven.
 
+##Relaties
 
+Tussen PiTs kunnen relaties worden gelegd. Zo kan je bijvoorbeeld zeggen dat de ene PiT hetzelfde concept beschrijft als een andere PiT, of dat de ene PiT in een andere ligt, of dat de ene PiT is opgegaan in de andere - bijvoorbeeld bij een gemeentelijke herindeling.
 
-##Aanleg van een bestaande straat dateren
+##HgConcepten
 
-Het in ErfGeo opgenomen Nationaal Wegenbestand (NWB) bevat alle huidige straten van Nederland, maar vertelt niet wanneer een straat is ontstaan. Nou weet ik dat het Wevershof in De Rijp rond 1971 is aangelegd. Die straat aanpassen in de NWB zelf is niet mogelijk. Immers, ErfGeo bevat data uit bronnen, en alleen als de data in de bron wijzigt kan de wijziging vervolgens in ErfGeo worden geïmporteerd. 
+PiTs die aan elkaar verbonden zijn met `hg:sameHgConcept` of `hg:isUsedFor` relaties vormen samen een HgConcept. Die tweede relatie geeft aan dat de ene PiT een naam bevat die - bijvoorbeeld gedurende een bepaalde periode - werd of wordt gebruikt voor een PiT die een fysieke plaats beschrijft.
 
-Wat wel mogelijk is, is een PiT maken in een eigen dataset. Als we die een relatie geven met de PiT in kwestie en een beginjaar toevoegen, dan hebben we ons doel bereikt.
+![Het HgConcept Heiloo](/images/klont.png)
 
-<table>
-	<tr>
-		<th>id</th>
-		<td>1</td>
-	</tr>
-	<tr>
-		<th>name</th>
-		<td>Wevershof</td>
-	</tr>
-	<tr>
-		<th>sameHgConcept</th>
-		<td>nwb/de-rijp-wevershof</td>
-	</tr>
-	<tr>
-		<th>hasBeginning</th>
-		<td>1971</td>
-	</tr>
-</table>
+Zo'n HgConcept is dus een dynamisch iets: er kunnen altijd nieuwe PiTs toegevoegd worden aan ErfGeo die een bestaand HgConcept beschrijven. Ook kan het best dat verschillende PiTs binnen één HgConcept elkaar tegenspreken. De ene zegt bijvoorbeeld dat de straat in 1900 is aangelegd, de andere noemt 1910 als begindatum.
 
-
-
-
-
-##Een historische straatnaam toevoegen
-
-In De Rijp loopt, ten noorden van de hoofdstraat, een klein straatje dat 't Achterom heet. Tot 1970 heette dit straatje Noorderstraat, maar in dat jaar fuseerde de gemeente De Rijp met de gemeente Graft en in die gemeente liep ook al een Noorderstraat.
-
-Met een PiT die de volgende velden bevat kunnen we die informatie toevoegen:
-
-<table>
-	<tr>
-		<th>id</th>
-		<td>2</td>
-	</tr>
-	<tr>
-		<th>name</th>
-		<td>Noorderstraat</td>
-	</tr>
-	<tr>
-		<th>isUsedFor</th>
-		<td>nwb/de-rijp-t-achterom</td>
-	</tr>
-	<tr>
-		<th>hasEnd</th>
-		<td>1970</td>
-	</tr>
-</table>
-
-
-
-
-##De Beemstermeer - een verdwenen meer toevoegen
-
-Ontginning van veen zorgde ervoor dat in de 12e eeuw het riviertje De Bamestra uitgroeide tot een binnenzee, een meer dat in open verbinding stond met de Zuiderzee. Begin 17e eeuw werd het meer drooggemaakt.
-
-Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, hebben we nog geen bestaande Beemstermeer PiT om naar te verwijzen. Daarom geven we ook een geometrie mee. Een geometrie kan een punt, een lijn of een polygoon zijn. Een punt mag als twee velden (lengte- en breedtegraad) meegeleverd worden, in de andere gevallen is het verplicht geojson aan te leveren. Het tooltje Histodraw maakt dat een relatief eenvoudige exercitie.
-
-<table>
-	<tr>
-		<th>id</th>
-		<td>7</td>
-	</tr>
-	<tr>
-		<th>name</th>
-		<td>Beemstermeer</td>
-	</tr>
-	<tr>
-		<th>hasBeginning</th>
-		<td>1971</td>
-	</tr>
-	<tr>
-		<th>hasEnd</th>
-		<td>1612</td>
-	</tr>
-	<tr>
-		<th>geometry</th>
-		<td>{"type":"Polygon","coordinates":[[[4.836559295654297,52.540449426243796],[4.8427391052246085,52.5433726592131],[ ... voor de leesbaarheid is de polygoon iets ingekort! ... ],[4.835357666015625,52.53648187013421],[4.836559295654297,52.540449426243796]]]}</td>
-	</tr>
-</table>
-
-
-
-##Midden-Beemster en De Rijp - het ontstaan van een plaats dateren
-
-Tot dan de havenbuurt van Graft, splitste het rijker wordende De Rijp zich in 1607 af en werd een zelfstandige Banne. Het verderop gelegen Midden-Beemster kon vanzelfsprekend pas ontstaan na de drooglegging van de Beemstermeer.
-
-Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfGeo PiT id als een externe URI (zolang die maar bij ErfGeo bekend is).
-
-<table>
-	<tr>
-		<th>id</th>
-		<td>3</td>
-	</tr>
-	<tr>
-		<th>name</th>
-		<td>De Rijp</td>
-	</tr>
-	<tr>
-		<th>sameHgConcept</th>
-		<td>tgn/1047707</td>
-	</tr>
-	<tr>
-		<th>hasBeginning</th>
-		<td>1607</td>
-	</tr>
-</table>
-
-
-
-<table>
-	<tr>
-		<th>id</th>
-		<td>4</td>
-	</tr>
-	<tr>
-		<th>name</th>
-		<td>Midden-Beemster</td>
-	</tr>
-	<tr>
-		<th>sameHgConcept</th>
-		<td>http://vocab.getty.edu/tgn/1047948</td>
-	</tr>
-	<tr>
-		<th>hasBeginning</th>
-		<td>1623</td>
-	</tr>
-</table>
-
-## 
+Ook kan het voorkomen dat PiTs niet verbonden zijn terwijl dat eigenlijk wel zou moeten. Dan krijg je bijvoorbeeld twee Alkmaars en blijkt bij nadere beschouwing dat ze dezelfde plaats bedoelen.
