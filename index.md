@@ -7,7 +7,7 @@ layout: "home"
         
 	<div class="six columns">
 
-		<h1 style="margin-bottom: 10px;">Thesaurus</h1>
+		<h1 style="margin-bottom: 10px;"><a href="http://histograph.io/viewer/">Thesaurus</a></h1>
 		<div id="searchbox">
 		<p>Zoek een plaats, gemeente, straat, etc.</p>
 			<div class="row">
@@ -25,7 +25,7 @@ layout: "home"
 	</div>
 
 	<div class="six columns">
-		<h1>Wat? Hoe?</h1>
+		<h1><a href="/wat-hoe/index.html">Wat? Hoe?</a></h1>
 		{% for item in site.wat-hoe limit:2 %}
 
 		  <a href="{{ item.url }}">{{ item.title }}</a><br />
@@ -40,14 +40,15 @@ layout: "home"
         
 	<div class="six columns">
 
-		<h1>Nieuws</h1>
+		<h1><a href="/nieuws/index.html">Nieuws</a></h1>
 
-		{% for post in site.posts %}
-		  <a href="{{ post.url }}">
-		    <h2>{{ post.title }}</h2>
-		  </a>
-		  {{ post.content }}
+		{% for item in site.nieuws limit:1 %}
+
+		  <a href="{{ item.url }}">{{ item.title }}</a><br />
+		  <p>{{ item.excerpt }}</p>
 		{% endfor %}
+
+		
 
 	</div>
 

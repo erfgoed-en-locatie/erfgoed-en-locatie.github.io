@@ -11,7 +11,7 @@ collections:
   wat-hoe:
     output: true
   nieuws:
-    output: false
+    output: true
   tools:
     output: true
 

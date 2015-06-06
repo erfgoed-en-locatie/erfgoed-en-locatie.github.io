@@ -145,9 +145,10 @@ header .row{
   margin-bottom: 10px;
 }
 
-.home-blocks h1{
+.home-blocks h1, .home-blocks h1 a{
   color:#6bc6de;
   font-size:24px;
+  font-weight: normal;
 }
 
 .home-blocks #searchbox{
