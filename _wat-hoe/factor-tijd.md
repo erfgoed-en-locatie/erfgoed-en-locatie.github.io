@@ -96,7 +96,7 @@ Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, maken we er eentje aan. En 
 	</tr>
 	<tr>
 		<th>hasBeginning</th>
-		<td>1971</td>
+		<td>1150</td>
 	</tr>
 	<tr>
 		<th>hasEnd</th>
