@@ -1,4 +1,0 @@
-[submodule "viewer"]
-	path = viewer
-	url = https://github.com/histograph/viewer.git
-	branch = erfgeo.nl
