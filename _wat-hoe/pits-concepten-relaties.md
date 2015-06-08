@@ -17,7 +17,7 @@ Tussen PiTs kunnen relaties worden gelegd. Zo kan je bijvoorbeeld zeggen dat de 
 
 ##HgConcepten
 
-PiTs die aan elkaar verbonden zijn met `hg:sameHgConcept` of `hg:isUsedFor` relaties vormen samen een HgConcept. Die tweede relatie geeft aan dat de ene PiT een naam bevat die - bijvoorbeeld gedurende een bepaalde periode - werd of wordt gebruikt voor een PiT die een fysieke plaats beschrijft.
+PiTs waarvan is aangegeven dat ze over dezelfde plaats gaan, met andere woorden PiTs die aan elkaar verbonden zijn met `hg:sameHgConcept` of `hg:isUsedFor` relaties, vormen samen een HgConcept. Die tweede relatie geeft aan dat de ene PiT een naam bevat die - bijvoorbeeld gedurende een bepaalde periode - werd of wordt gebruikt voor een PiT die een fysieke plaats beschrijft.
 
 ![Het HgConcept Heiloo](/images/klont.png)
 
