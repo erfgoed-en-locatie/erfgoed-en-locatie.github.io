@@ -1,6 +1,6 @@
 fade-in:                      false
 
-font-color:                   "#333"
+font-color:                   "#333333"
 background-color:             "#F5F5F3"
 background-color-transparant: "rgba(249, 249, 249, 0.8)"
 brand-color:                  "#6bc6de"
