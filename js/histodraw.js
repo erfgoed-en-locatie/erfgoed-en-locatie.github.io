@@ -1,8 +1,40 @@
-var osmUrl = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
-	  osmAttrib = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-	  osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}),
-	  map = new L.Map('map', {layers: [osm], center: new L.LatLng(52.1601, 4.4970), zoom: 15 });
 
+/** Baselayer **/
+var osm = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+});
+/** old maps */
+var vancampen1850 = L.esri.tiledMapLayer('http://tiles.arcgis.com/tiles/brgRNnNj6DClnBDf/arcgis/rest/services/1850_van_Campen/MapServer', {
+    'opacity': 0.8
+});
+var vancampen1879 = L.esri.tiledMapLayer('http://tiles.arcgis.com/tiles/brgRNnNj6DClnBDf/arcgis/rest/services/1879_van_Campen/MapServer', {
+    'opacity': 0.8
+});
+// http://tiles.arcgis.com/tiles/brgRNnNj6DClnBDf/arcgis/rest/services/1899_van_Campen/MapServer
+var vancampen1899 = L.esri.tiledMapLayer('http://tiles.arcgis.com/tiles/brgRNnNj6DClnBDf/arcgis/rest/services/Kaart_1899/MapServer', {
+    'opacity': 0.8
+});
+var streets = L.esri.basemapLayer('Streets');
+/** Leaflet layers */
+var baseLayers = {
+    "osm": osm,
+    "streets": streets
+};
+var overlays = {
+    "Van Campen 1850": vancampen1850,
+    "Van Campen 1879": vancampen1879,
+    "Van Campen 1899": vancampen1899,
+};
+var map = L.map('map', {
+    center: [52.16, 4.49], // leiden
+    zoom: 15,
+    layers: [osm,vancampen1850]
+});
+
+L.control.layers(baseLayers, overlays).addTo(map);
+
+
+// integrate draw
 var drawnItems = new L.FeatureGroup();
 map.addLayer(drawnItems);
 

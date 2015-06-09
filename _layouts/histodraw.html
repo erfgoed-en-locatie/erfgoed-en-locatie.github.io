@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-	{% include head.html %}
-	<!-- leaflet -->
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    {% include head.html %}
+    <!-- leaflet -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
-  <!-- leaflet draw -->
-  <link rel="stylesheet" href="/css/leaflet.draw.css" />
-  <link rel="stylesheet" href="/css/leaflet-search.min.css" />
-  <script src="/js/leaflet.draw.js"></script>
-  <script src="/js/leaflet-search.min.js" /></script>
-  <style>
-    #map {
-        position: absolute;
-        width: 100%;
-        top: 38px;
-        bottom: 0;
-      }
-      #legend {
-        position: absolute;
-        padding: 10px;
-        width: 20%;
-        height: auto;
-        top:42px;
-        right: 4px;
-        background-color: #efefef;
-        border: 2px solid dimgray;
-        z-index: 99999;
-      }
-  </style>
+    <!-- leaflet draw -->
+    <link rel="stylesheet" href="/css/leaflet.draw.css" />
+    <link rel="stylesheet" href="/css/leaflet-search.min.css" />
+    <script src="/js/leaflet.draw.js"></script>
+    <script src="/js/leaflet-search.min.js"></script>
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="//cdn.jsdelivr.net/leaflet.esri/latest/esri-leaflet.js"></script>
+    <style>
+        #map {
+            position: absolute;
+            width: 100%;
+            top: 38px;
+            bottom: 0;
+        }
+        #map-legend {
+            position: absolute;
+            padding: 10px;
+            width: 20%;
+            height: auto;
+            bottom: 32px;
+            right: 4px;
+            background-color: #efefef;
+            border: 2px solid dimgray;
+            z-index: 99999;
+        }
+    </style>
 </head>
 <body>
-  {% include header.html %}
-  <div id="legend">
+{% include header.html %}
+<div id="map-legend">
     <h3>Uitleg</h3>
     <p>Teken lijnen en/of polygonen op de kaart. In de popup verschijnt de geometrie in GeoJSON.geometry formaat. Copy/paste :-)</p>
-  </div>
+</div>
 
-  <div id="map">
+<div id="map">
 
-  </div>
-  {{ content }}
-  <script src="/js/histodraw.js"></script>
+</div>
+{{ content }}
+<script src="/js/histodraw.js"></script>
 </body>
 </html>
