@@ -61,8 +61,6 @@ function getApiUrl(queryString) {
     params.push("name=" + queryString.trim());
   }
 
-  console.log(url + params.join('&'));
-
   return url + params.join("&");
 
 }

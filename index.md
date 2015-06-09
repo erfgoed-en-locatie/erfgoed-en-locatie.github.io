@@ -7,7 +7,7 @@ layout: "home"
         
 	<div class="six columns">
 
-		<h1 style="margin-bottom: 10px;"><a href="http://histograph.io/viewer/">Thesaurus</a></h1>
+		<h1 style="margin-bottom: 10px;"><a href="/thesaurus">Thesaurus</a></h1>
 		<div id="searchbox">
 		<p>Zoek een plaats, gemeente, straat, etc.</p>
 			<div class="row">
@@ -84,7 +84,7 @@ layout: "home"
 		var enterCode = 13;
 
 		if(e.keyCode === enterCode){
-			location.href = 'http://histograph.io/viewer/#search=' + this.value
+			location.href = '/thesaurus/#search=' + this.value
 		}
 	}
 
