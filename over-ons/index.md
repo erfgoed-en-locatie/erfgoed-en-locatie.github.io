@@ -12,6 +12,7 @@ Het ontwikkelteam dat onder de leiding van <a href="https://www.linkedin.com/pro
 <li><a href="https://www.linkedin.com/profile/view?id=16877806">Petra Dreiskämper</a></li>
 <li><a href="https://www.linkedin.com/profile/view?id=23196350">Menno den Engelse</a></li>
 <li><a href="https://www.linkedin.com/profile/view?id=81500314">Jelle Herold</a></li>
+<li><a href="https://www.linkedin.com/pub/ivo-de-kler/11/102/159">Ivo de Kler</a></li>
 <li><a href="https://www.linkedin.com/profile/view?id=14866792">Bert Spaan</a></li>
 <li><a href="https://www.linkedin.com/profile/view?id=174235474">Rein van 't Veer</a></li>
 <li><a href="https://www.linkedin.com/profile/view?id=112363629">Rutger van Willigen</a></li>
