@@ -1,6 +1,5 @@
-- name: http://histograph.io/viewer/
+- name: thesaurus
   title: Thesaurus
-  notLocal: true
 
 - name: nieuws
   title: Nieuws
