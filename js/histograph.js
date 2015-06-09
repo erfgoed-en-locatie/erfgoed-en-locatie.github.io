@@ -22,13 +22,13 @@ var ResultsBox = React.createClass({displayName: "ResultsBox",
       var feature = this.props.geojson.features[this.props.selected],
           hideConceptList = true
       var conceptBox = (
-        React.createElement("div", null, 
-          React.createElement(ConceptBoxResults, {feature: feature, back: this.handleBack, showGraph: this.showGraph, graphHidden: this.state.graphHidden}), 
-          React.createElement(ConceptBoxList, {feature: feature, featureGroups: this.state.featureGroups, 
-              pitLayers: this.state.pitLayers}), 
-          React.createElement(Graph, {feature: feature, graphHidden: this.state.graphHidden})
-        )
-      );
+            React.createElement("div", null, 
+              React.createElement(ConceptBoxResults, {feature: feature, back: this.handleBack, showGraph: this.showGraph, graphHidden: this.state.graphHidden}), 
+              React.createElement(ConceptBoxList, {feature: feature, featureGroups: this.state.featureGroups, 
+                pitLayers: this.state.pitLayers}), 
+              React.createElement(Graph, {feature: feature, graphHidden: this.state.graphHidden})
+            )
+          );
     }
 
     if (this.props.geojson && this.props.geojson.features && this.props.geojson.features.length > 0) {
@@ -490,7 +490,7 @@ var ConceptBoxList = React.createClass({displayName: "ConceptBoxList",
           "Showing ", filteredPits.length, " place ", filteredPits.length == 1 ? "name" : "names", " (", geometryCount, " on map):", 
           React.createElement("a", {title: "Start timelapse - loop selected place names", id: "loop-pits", className: "float-right", href: "#", onClick: this.toggleLoop}, 
             loopMessage, 
-          React.createElement("img", {src: "images/rocket.png", height: "18px"}))
+          React.createElement("img", {src: "/images/rocket.png", height: "18px"}))
           );
     } else {
       filterMessage = React.createElement("span", null, "No place names matching your filter");
