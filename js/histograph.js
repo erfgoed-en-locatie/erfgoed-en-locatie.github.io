@@ -505,54 +505,54 @@ var ConceptBoxList = React.createClass({displayName: "ConceptBoxList",
         };
 
     return (
-      React.createElement("div", null, 
-        React.createElement("div", {className: "padding"}, 
-          React.createElement("table", {className: "indent"}, 
-            React.createElement("tbody", null, 
-              React.createElement("tr", null, 
-                React.createElement("td", {className: "label"}, "Data"), 
-                React.createElement("td", null, 
+      React.createElement("div", null,
+        React.createElement("div", {className: "padding"},
+          React.createElement("table", {className: "indent"},
+            React.createElement("tbody", null,
+              React.createElement("tr", null,
+                React.createElement("td", {className: "label"}, "Data"),
+                React.createElement("td", null,
                   React.createElement("a", {href: links['histograph']}, "API"), ", ", React.createElement("a", {href: links['jsonld']}, "JSON-LD Playground"), ", ", React.createElement("a", {href: links['geojson']}, "geojson.io")
                 )
-              ), 
-              React.createElement("tr", null, 
-                React.createElement("td", {className: "label"}, "Names"), 
-                React.createElement("td", null, 
+              ),
+              React.createElement("tr", null,
+                React.createElement("td", {className: "label"}, "Names"),
+                React.createElement("td", null,
                   React.createElement("input", {type: "search", placeholder: "Filter names", id: "pit-name-filter", onChange: this.filterName})
                 )
-              ), 
-              React.createElement("tr", null, 
-                React.createElement("td", {className: "label"}, "Sources"), 
-                React.createElement("td", null, 
-                  React.createElement("span", {className: "source-list"}, 
+              ),
+              React.createElement("tr", null,
+                React.createElement("td", {className: "label"}, "Sources"),
+                React.createElement("td", null,
+                  React.createElement("span", {className: "source-list"},
                     sources.map(function(source, index) {
                       var boundFilterSource = this.filterSource.bind(this, source),
                           className = this.state.filters.sources[source] ? "" : "filtered";
-                      return React.createElement("span", {key: source}, React.createElement("a", {className: className, href: "#", 
+                      return React.createElement("span", {key: source}, React.createElement("a", {className: className, href: "#",
                                 onClick: boundFilterSource}, React.createElement("code", null, source)), " ");
                     }.bind(this))
                   )
                 )
-              ), 
+              ),
 
-              React.createElement("tr", null, 
-                React.createElement("td", {className: "label"}, "Geom"), 
-                React.createElement("td", null, 
-                  React.createElement("span", {className: "geometry-type-list"}, 
+              React.createElement("tr", null,
+                React.createElement("td", {className: "label"}, "Geom"),
+                React.createElement("td", null,
+                  React.createElement("span", {className: "geometry-type-list"},
                     Object.keys(this.state.filters.geometryTypes).map(function(geometryType, index) {
                       var boundFilterGeometryType = this.filterGeometryType.bind(this, geometryType),
                           //geometry-type
                           className = this.state.filters.geometryTypes[geometryType] ? "" : "filtered";
-                      return React.createElement("span", {key: geometryType}, React.createElement("a", {className: className, href: "#", 
+                      return React.createElement("span", {key: geometryType}, React.createElement("a", {className: className, href: "#",
                                 onClick: boundFilterGeometryType}, geometryType));
                     }.bind(this))
                   )
                 )
-              ), 
+              ),
 
-              React.createElement("tr", null, 
-                React.createElement("td", {className: "label"}, "Sort"), 
-                React.createElement("td", {className: "sort-fields"}, 
+              React.createElement("tr", null,
+                React.createElement("td", {className: "label"}, "Sort"),
+                React.createElement("td", {className: "sort-fields"},
                   this.state.sortFields.map(function(field, index) {
                     var boundSort = this.sort.bind(this, field),
                         className = this.state.sortField === field ? "selected" : "";
@@ -561,12 +561,12 @@ var ConceptBoxList = React.createClass({displayName: "ConceptBoxList",
                 )
               )
             )
-          ), 
-          React.createElement("p", null, 
+          ),
+          React.createElement("p", null,
             filterMessage
           )
-        ), 
-        React.createElement("ol", {id: "pits", className: "list"}, 
+        ),
+        React.createElement("ol", {id: "pits", className: "list"},
           pitComponents
         )
       )
