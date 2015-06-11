@@ -2,7 +2,7 @@ var map = L.map('map', {
       //zoomControl: false
       minZoom: 4, maxZoom: 18
     }),
-    color = 'rgba(74,187,131, 1)',
+    color = 'rgba(105,198,223,1)',
     tileUrl = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
     attribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
     subdomains = 'abcd',

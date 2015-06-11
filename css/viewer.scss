@@ -4,8 +4,8 @@
 /* Variables
    ========================================================================== */
 
-$primary-color: rgba(74,187,131,1);
-$color-pattern: rgba(74,187,131,0.4); //use rgba to not break the svg encoded string
+$primary-color: rgba(105,198,223,1);
+$color-pattern: rgba(105,198,223,0.4); //use rgba to not break the svg encoded string
 $sidebar-width: 450px;
 
 /* Fonts
@@ -174,7 +174,7 @@ h5 code {
 
 #search-box input {
   margin: 0;
-  width: calc(100% - 73px);
+  width: calc(100% - 22px);
 }
 
 input[type="search"]:focus {
