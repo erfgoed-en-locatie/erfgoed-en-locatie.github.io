@@ -20,12 +20,12 @@ var ResultsBox = React.createClass({displayName: "ResultsBox",
 
     if (this.props.selected != -1) {
       var feature = this.props.geojson.features[this.props.selected],
-          hideConceptList = true
-      var conceptBox = (
-            React.createElement("div", null, 
-              React.createElement(ConceptBoxResults, {feature: feature, back: this.handleBack, showGraph: this.showGraph, graphHidden: this.state.graphHidden}), 
-              React.createElement(ConceptBoxList, {feature: feature, featureGroups: this.state.featureGroups, 
-                pitLayers: this.state.pitLayers}), 
+          hideConceptList = true,
+          conceptBox = (
+            React.createElement("div", null,
+              React.createElement(ConceptBoxResults, {feature: feature, back: this.handleBack, showGraph: this.showGraph, graphHidden: this.state.graphHidden}),
+              React.createElement(ConceptBoxList, {feature: feature, featureGroups: this.state.featureGroups,
+                pitLayers: this.state.pitLayers}),
               React.createElement(Graph, {feature: feature, graphHidden: this.state.graphHidden})
             )
           );
@@ -35,18 +35,18 @@ var ResultsBox = React.createClass({displayName: "ResultsBox",
       var className = (hideConceptList || this.props.hidden) ? "hidden" : "";
 
       return (
-        React.createElement("div", null, 
-          React.createElement("div", {className: className}, 
-            React.createElement(ConceptsBoxResults, {features: this.props.geojson.features, hide: this.handleHide}), 
-            React.createElement(ConceptsBoxList, {features: this.props.geojson.features, featureGroups: this.state.featureGroups, 
+        React.createElement("div", null,
+          React.createElement("div", {className: className},
+            React.createElement(ConceptsBoxResults, {features: this.props.geojson.features, hide: this.handleHide}),
+            React.createElement(ConceptsBoxList, {features: this.props.geojson.features, featureGroups: this.state.featureGroups,
                 pitLayers: this.state.pitLayers, onSelect: this.handleSelect})
-          ), 
+          ),
           conceptBox
         )
       );
     } else {
       return (
-        React.createElement("div", {className: className}, 
+        React.createElement("div", {className: className},
           React.createElement(ConceptsBoxResults, {error: this.props.error, hide: this.handleHide})
         )
       );
@@ -89,8 +89,9 @@ var ConceptsBoxResults = React.createClass({displayName: "ConceptsBoxResults",
   render: function() {
     var message;
     if (this.props.features && this.props.features.length) {
-      var concept = this.props.features.length == 1 ? "concept" : "concepts",
-          message = this.props.features.length + " " + concept+ " found:";
+      var concept = this.props.features.length == 1 ? "concept" : "concepts";
+      
+      message = this.props.features.length + " " + concept+ " found:";
     } else if (this.props.error) {
       message = "Error: " + this.props.error;
     } else {
@@ -98,8 +99,8 @@ var ConceptsBoxResults = React.createClass({displayName: "ConceptsBoxResults",
     }
 
     return (
-      React.createElement("div", {id: "concepts-results", className: "padding results"}, 
-        React.createElement("span", {id: "concepts-results-message"}, message), 
+      React.createElement("div", {id: "concepts-results", className: "padding results"},
+        React.createElement("span", {id: "concepts-results-message"}, message),
         React.createElement("a", {id: "concepts-close", className: "float-right", href: "#", onClick: this.props.hide}, "Close")
       )
     );
@@ -109,7 +110,7 @@ var ConceptsBoxResults = React.createClass({displayName: "ConceptsBoxResults",
 var ConceptsBoxList = React.createClass({displayName: "ConceptsBoxList",
 
   handleSelect: function(index) {
-    this.props.onSelect(index)
+    this.props.onSelect(index);
   },
 
   updateOtherConcepts: function(callingIndex, state) {
@@ -123,7 +124,7 @@ var ConceptsBoxList = React.createClass({displayName: "ConceptsBoxList",
 
   render: function() {
     return (
-      React.createElement("ol", {id: "concepts", className: "list"}, 
+      React.createElement("ol", {id: "concepts", className: "list"},
         this.props.features.map(function(feature, index) {
           // Compute subgraph key from hgids
           var key = feature.properties.pits
@@ -134,9 +135,9 @@ var ConceptsBoxList = React.createClass({displayName: "ConceptsBoxList",
           var boundSelect = this.handleSelect.bind(this, index),
               boundUpdateOtherConcepts = this.updateOtherConcepts.bind(this, index);
 
-          return React.createElement(ConceptsBoxListItem, {key: key, feature: feature, index: index, 
-              featureGroups: this.props.featureGroups, pitLayers: this.props.pitLayers, 
-              onSelect: boundSelect, ref: 'item' + index, 
+          return React.createElement(ConceptsBoxListItem, {key: key, feature: feature, index: index,
+              featureGroups: this.props.featureGroups, pitLayers: this.props.pitLayers,
+              onSelect: boundSelect, ref: 'item' + index,
               updateOtherConcepts: boundUpdateOtherConcepts});
         }.bind(this))
       )
@@ -173,14 +174,14 @@ var ConceptsBoxListItem = React.createClass({displayName: "ConceptsBoxListItem",
 
       selectedNamesSuffix = sortedNames.length > selectedNames.length ? " and " + namesLengthDiff + " other " +  namesPlurSing : "";
 
-      selectedNamesRow =  React.createElement("tr", null, 
-          React.createElement("td", {className: "label"}, "Names"), 
-          React.createElement("td", null, 
-            React.createElement("span", null, 
+      selectedNamesRow =  React.createElement("tr", null,
+          React.createElement("td", {className: "label"}, "Names"),
+          React.createElement("td", null,
+            React.createElement("span", null,
               selectedNames.map(function(selectedName, index) {
                 return React.createElement("span", {key: index, className: "concept-alt-name"}, selectedName);
               })
-            ), 
+            ),
             React.createElement("span", null, selectedNamesSuffix)
           )
         );
@@ -195,18 +196,18 @@ var ConceptsBoxListItem = React.createClass({displayName: "ConceptsBoxListItem",
     var className = "padding concept" + (!this.state.selected &! this.state.unfade ? " faded" : "");
 
     return (
-      React.createElement("li", {className: className}, 
-        React.createElement("h5", null, 
-          React.createElement("span", null, selectedName), 
+      React.createElement("li", {className: className},
+        React.createElement("h5", null,
+          React.createElement("span", null, selectedName),
           React.createElement("code", null, feature.properties.type.replace("hg:", ""))
-        ), 
-        React.createElement("table", {className: "indent"}, 
-          React.createElement("tbody", null, 
-            selectedNamesRow, 
-            React.createElement("tr", null, 
-              React.createElement("td", {className: "label"}, "Sources"), 
-              React.createElement("td", null, 
-                React.createElement("span", {className: "source-list"}, 
+        ),
+        React.createElement("table", {className: "indent"},
+          React.createElement("tbody", null,
+            selectedNamesRow,
+            React.createElement("tr", null,
+              React.createElement("td", {className: "label"}, "Sources"),
+              React.createElement("td", null,
+                React.createElement("span", {className: "source-list"},
                   sources.map(function(source, index) {
                     return React.createElement("span", {key: index}, React.createElement("code", null, source));
                   })
@@ -214,13 +215,13 @@ var ConceptsBoxListItem = React.createClass({displayName: "ConceptsBoxListItem",
               )
             )
           )
-        ), 
-        React.createElement("div", {className: "buttons"}, 
+        ),
+        React.createElement("div", {className: "buttons"},
           //React.createElement("button", {className: "details", onClick: this.details, title: "Show concept's details"}, "Details..."), 
-          React.createElement("a", {className: "details", title: "Show concept's details", href: 'http://thesaurus.erfgeo.nl/hgconcept/' + this.props.feature.properties.pits[0].hgid }, "Details..."), 
-          React.createElement("button", {className: "zoom", onClick: this.zoom, title: "Zoom and pan map to concept"}, "Zoom"), 
+          React.createElement("a", {className: "details", title: "Show concept's details", href: 'http://thesaurus.erfgeo.nl/hgconcept/' + this.props.feature.properties.pits[0].hgid }, "Details..."),
+          React.createElement("button", {className: "zoom", onClick: this.zoom, title: "Zoom and pan map to concept"}, "Zoom"),
           React.createElement("button", {className: "select", onClick: this.select, title: "Highlight concept on map (and fade others)"}, "Select")
-        ), 
+        ),
         React.createElement("div", {className: "clear"})
       )
     );
@@ -355,19 +356,18 @@ var ConceptBoxResults = React.createClass({displayName: "ConceptBoxResults",
     var sortedNames = sortNames(feature.properties.pits),
         selectedName = sortedNames[0].name;
         pitCount = feature.properties.pits.length,
-        message = "Concept contains " + pitCount + " place "
-            + ((pitCount == 1) ? "name" : "names");
+        message = ["Concept contains ", pitCount, " place ", pitCount == 1 ? "name" : "names"].join();
 
     return (
-      React.createElement("div", null, 
-        React.createElement("div", {id: "pits-results", className: "padding results"}, 
-          "1 concept selected:", 
+      React.createElement("div", null,
+        React.createElement("div", {id: "pits-results", className: "padding results"},
+          "1 concept selected:",
           React.createElement("a", {id: "pits-close", className: "float-right", href: "#", onClick: this.props.back}, "Back to concept list")
-        ), 
-        React.createElement("div", {id: "pits-header", className: "padding"}, 
-          React.createElement("h5", null, selectedName, React.createElement("code", null, this.props.feature.properties.type.replace("hg:", ""))), 
-          React.createElement("div", {className: "cell-padding"}, 
-            message, 
+        ),
+        React.createElement("div", {id: "pits-header", className: "padding"},
+          React.createElement("h5", null, selectedName, React.createElement("code", null, this.props.feature.properties.type.replace("hg:", ""))),
+          React.createElement("div", {className: "cell-padding"},
+            message,
             React.createElement("a", {id: "show-graph", className: "float-right", href: "#", onClick: this.showGraph}, this.props.graphHidden ? "Show graph" : "Hide graph")
           )
         )
@@ -424,7 +424,7 @@ var ConceptBoxList = React.createClass({displayName: "ConceptBoxList",
   render: function() {
     var sources = this.props.feature.properties.pits
             .map(function(pit) { return pit.source; })
-            .unique()
+            .unique();
         filteredPits = this.props.feature.properties.pits
             .filter(function(pit) {
               filterGeometryType = "none";
@@ -439,9 +439,9 @@ var ConceptBoxList = React.createClass({displayName: "ConceptBoxList",
                 }
               }
 
-              return this.state.filters.geometryTypes[filterGeometryType]
-                  && this.state.filters.name.test(pit.name.toLowerCase())
-                  && this.state.filters.sources[pit.source];
+              return this.state.filters.geometryTypes[filterGeometryType] &&
+                     this.state.filters.name.test(pit.name.toLowerCase()) &&
+                     this.state.filters.sources[pit.source];
             }.bind(this));
 
     if (this.state.sortField != this.state.sortFields[0]) {
@@ -479,20 +479,20 @@ var ConceptBoxList = React.createClass({displayName: "ConceptBoxList",
 
     var pitComponents = filteredPits.map(function(pit, index) {
       var boundUpdateOtherPits = this.updateOtherPits.bind(this, index);
-      return React.createElement(Pit, {key: pit.hgid, pit: pit, feature: this.props.feature, index: index, 
-          featureGroups: this.props.featureGroups, pitLayers: this.props.pitLayers, 
+      return React.createElement(Pit, {key: pit.hgid, pit: pit, feature: this.props.feature, index: index,
+          featureGroups: this.props.featureGroups, pitLayers: this.props.pitLayers,
           ref: 'item' + index, updateOtherPits: boundUpdateOtherPits});
     }.bind(this));
 
     var filterMessage;
     if (filteredPits.length > 0) {
       var loopMessage = this.state.loop.timer ? "Stop " : "Timelapse ";
-      filterMessage = React.createElement("span", null, 
-          "Showing ", filteredPits.length, " place ", filteredPits.length == 1 ? "name" : "names", " (", geometryCount, " on map):", 
-          React.createElement("a", {title: "Start timelapse - loop selected place names", id: "loop-pits", className: "float-right", href: "#", onClick: this.toggleLoop}, 
-            loopMessage, 
+      filterMessage = React.createElement("span", null,
+          "Showing ", filteredPits.length, " place ", filteredPits.length == 1 ? "name" : "names", " (", geometryCount, " on map):",
+          React.createElement("a", {title: "Start timelapse - loop selected place names", id: "loop-pits", className: "float-right", href: "#", onClick: this.toggleLoop},
+            loopMessage,
           React.createElement("img", {src: "/images/rocket.png", height: "18px"}))
-          );
+      );
     } else {
       filterMessage = React.createElement("span", null, "No place names matching your filter");
     }
@@ -643,7 +643,7 @@ var ConceptBoxList = React.createClass({displayName: "ConceptBoxList",
       var current = this.state.filters.sources[source];
 
       var count = 0;
-      for (s in this.state.filters.sources) {
+      for (var s in this.state.filters.sources) {
         count += this.state.filters.sources[s] ? 1 : 0;
       }
 
@@ -680,7 +680,8 @@ var Pit = React.createClass({displayName: "Pit",
         geometryRow,
         periodRow,
         geometrySpan,
-        buttons;
+        buttons,
+        className;
 
     if (pit.uri) {
       uriRow = (React.createElement("tr", null, React.createElement("td", {className: "label"}, "URI"), React.createElement("td", null, React.createElement("a", {href: pit.uri}, pit.uri))));
@@ -703,8 +704,9 @@ var Pit = React.createClass({displayName: "Pit",
     }
 
     if (pit.geometryIndex > -1) {
-      var className = "float-right geometry-type ",
-          geometryType = this.props.feature.geometry.geometries[pit.geometryIndex].type;
+      className = "float-right geometry-type ";
+      
+      var geometryType = this.props.feature.geometry.geometries[pit.geometryIndex].type;
 
       if (geometryType === "Point" || geometryType === "MultiPoint") {
         className += "geometry-type-point";
@@ -716,30 +718,30 @@ var Pit = React.createClass({displayName: "Pit",
       geometrySpan = (React.createElement("span", {className: className}));
 
       buttons = (
-        React.createElement("div", {className: "buttons"}, 
-          React.createElement("button", {className: "zoom", onClick: this.zoom, title: "Zoom and pan map to place name"}, "Zoom"), 
+        React.createElement("div", {className: "buttons"},
+          React.createElement("button", {className: "zoom", onClick: this.zoom, title: "Zoom and pan map to place name"}, "Zoom"),
           React.createElement("button", {className: "select", onClick: this.select, title: "Select place name (and fade others)"}, "Select")
         )
       );
     }
 
-    var className = "padding pit" + (!this.state.selected &! this.state.unfade ? " faded" : "");
+    className = "padding pit" + (!this.state.selected &! this.state.unfade ? " faded" : "");
 
     return (
-      React.createElement("li", {className: className}, 
-        React.createElement("h6", null, pit.name, geometrySpan), 
-        React.createElement("div", null, 
-          React.createElement("table", null, 
-            React.createElement("tbody", null, 
-              React.createElement("tr", null, 
-                React.createElement("td", {className: "label"}, "ID"), 
+      React.createElement("li", {className: className},
+        React.createElement("h6", null, pit.name, geometrySpan),
+        React.createElement("div", null,
+          React.createElement("table", null,
+            React.createElement("tbody", null,
+              React.createElement("tr", null,
+                React.createElement("td", {className: "label"}, "ID"),
                 React.createElement("td", null, React.createElement("code", null, pit.hgid))
-              ), 
-              uriRow, 
+              ),
+              uriRow,
               periodRow
             )
-          ), 
-          buttons, 
+          ),
+          buttons,
           React.createElement("div", {className: "clear"})
         )
       )
@@ -809,13 +811,13 @@ var Graph = React.createClass({displayName: "Graph",
       return null;
     } else {
       return (
-        React.createElement("div", {id: "graph-container", className: "box-container"}, 
-          React.createElement("div", {className: "box-container-padding"}, 
-            React.createElement("div", {id: "graph-box", className: "box"}, 
-              React.createElement("svg", {id: "graph"}, 
-                React.createElement("defs", null, 
-                  React.createElement("marker", {id: "marker-arrow", orient: "auto", markerWidth: "8", markerHeight: "8", 
-                      refX: "12", refY: "4"}, 
+        React.createElement("div", {id: "graph-container", className: "box-container"},
+          React.createElement("div", {className: "box-container-padding"},
+            React.createElement("div", {id: "graph-box", className: "box"},
+              React.createElement("svg", {id: "graph"},
+                React.createElement("defs", null,
+                  React.createElement("marker", {id: "marker-arrow", orient: "auto", markerWidth: "8", markerHeight: "8",
+                      refX: "12", refY: "4"},
                     React.createElement("path", {d: "M0,0 V8 L8,4 Z"})
                   )
                 )
