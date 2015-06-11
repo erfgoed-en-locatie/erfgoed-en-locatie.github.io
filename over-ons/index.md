@@ -13,27 +13,34 @@ href="https://www.linkedin.com/profile/view?id=20264891">Job Spierings</a> aan
 de oplevering van de tools blijft werken tot eind September 2015 bestaat (en
 bestond in alfabetische volgorde) uit:
 
-<table>
-	<tbody>
-		<style>
-			td{
-				border-bottom: 0;
-			}
-		</style>
-		<tr>
-			<td><a href="https://www.linkedin.com/profile/view?id=100742746">Niene Boeijen</a></td>
-			<td><a href="https://www.linkedin.com/profile/view?id=16877806">Petra Dreiskämper</a></td>
-			<td><a href="https://www.linkedin.com/profile/view?id=23196350">Menno den Engelse</a></td>
-			<td><a href="http://defekt.nl/~jelle/">Jelle Herold</a></td>
-		</tr>
-		<tr>
-			<td><a href="https://www.linkedin.com/pub/ivo-de-kler/11/102/159">Ivo de Kler</a></td>
-			<td><a href="https://www.linkedin.com/profile/view?id=14866792">Bert Spaan</a></td>
-			<td><a href="https://www.linkedin.com/profile/view?id=174235474">Rein van 't Veer</a></td>
-			<td><a href="https://www.linkedin.com/profile/view?id=112363629">Rutger van Willigen</a></td>
-		</tr>
-	</tbody>
-</table>
+<div class="row">
+	<div class="three columns">
+		<a href="https://www.linkedin.com/profile/view?id=100742746">Niene Boeijen</a>
+	</div>
+	<div class="three columns">
+		<a href="https://www.linkedin.com/profile/view?id=16877806">Petra Dreiskämper</a>
+	</div>
+	<div class="three columns">
+		<a href="https://www.linkedin.com/profile/view?id=23196350">Menno den Engelse</a>
+	</div>
+	<div class="three columns">
+		<a href="http://defekt.nl/~jelle/">Jelle Herold</a>
+	</div>
+</div>
+<div class="row">
+	<div class="three columns">
+		<a href="https://www.linkedin.com/pub/ivo-de-kler/11/102/159">Ivo de Kler</a>
+	</div>
+	<div class="three columns">
+		<a href="https://www.linkedin.com/profile/view?id=14866792">Bert Spaan</a>
+	</div>
+	<div class="three columns">
+		<a href="https://www.linkedin.com/profile/view?id=174235474">Rein van 't Veer</a>
+	</div>
+	<div class="three columns">
+		<a href="https://www.linkedin.com/profile/view?id=112363629">Rutger van Willigen</a>
+	</div>
+</div>
 
 Aanvullende informatie over de formatie van het
 <a href="http://erfgoedenlocatie.nl/projectbeschrijving/projectteam/">E&L team bij DEN</a>,
