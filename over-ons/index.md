@@ -13,19 +13,30 @@ href="https://www.linkedin.com/profile/view?id=20264891">Job Spierings</a> aan
 de oplevering van de tools blijft werken tot eind September 2015 bestaat (en
 bestond in alfabetische volgorde) uit:
 
-<ul>
-	<li><a href="https://www.linkedin.com/profile/view?id=100742746">Niene Boeijen</a></li>
-	<li><a href="https://www.linkedin.com/profile/view?id=16877806">Petra Dreiskämper</a></li>
-	<li><a href="https://www.linkedin.com/profile/view?id=23196350">Menno den Engelse</a></li>
-	<li><a href="http://defekt.nl/~jelle/">Jelle Herold</a></li>
-	<li><a href="https://www.linkedin.com/pub/ivo-de-kler/11/102/159">Ivo de Kler</a></li>
-	<li><a href="https://www.linkedin.com/profile/view?id=14866792">Bert Spaan</a></li>
-	<li><a href="https://www.linkedin.com/profile/view?id=174235474">Rein van 't Veer</a></li>
-	<li><a href="https://www.linkedin.com/profile/view?id=112363629">Rutger van Willigen</a></li>
-</ul>
+<table>
+	<tbody>
+		<style>
+			td{
+				border-bottom: 0;
+			}
+		</style>
+		<tr>
+			<td><a href="https://www.linkedin.com/profile/view?id=100742746">Niene Boeijen</a></td>
+			<td><a href="https://www.linkedin.com/profile/view?id=16877806">Petra Dreiskämper</a></td>
+			<td><a href="https://www.linkedin.com/profile/view?id=23196350">Menno den Engelse</a></td>
+			<td><a href="http://defekt.nl/~jelle/">Jelle Herold</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.linkedin.com/pub/ivo-de-kler/11/102/159">Ivo de Kler</a></td>
+			<td><a href="https://www.linkedin.com/profile/view?id=14866792">Bert Spaan</a></td>
+			<td><a href="https://www.linkedin.com/profile/view?id=174235474">Rein van 't Veer</a></td>
+			<td><a href="https://www.linkedin.com/profile/view?id=112363629">Rutger van Willigen</a></td>
+		</tr>
+	</tbody>
+</table>
 
 Aanvullende informatie over de formatie van het
-<a href="http://erfgoedenlocatie.nl/projectbeschrijving/projectteam/">E&L team bij DEN</a>
+<a href="http://erfgoedenlocatie.nl/projectbeschrijving/projectteam/">E&L team bij DEN</a>,
 de <a href="http://erfgoedenlocatie.nl/projectbeschrijving/partners/">projectpartners</a>
 en het project an sich vindt u op de
 <a href="http://erfgoedenlocatie.nl/projectbeschrijving/projectteam/">projectwebsite</a>.
