@@ -42,7 +42,7 @@ function sortNames(pits) {
 };
 
 function getApiUrl(queryString) {
-  var url = "https://api.histograph.io/search?",
+  var url = "https://api.erfgeo.nl/search?",
       matches = queryString.match(/(\S*)=(\S*)/g)
       params = [];
 
