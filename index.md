@@ -13,7 +13,6 @@ layout: "home"
 			<div class="row">
 				<div class="eight columns">
 				<label>
-					
 					<input type="text" class="u-full-width" id="searchstring" placeholder="bijv. spaarndam" data-keyuphandler="thesaurusSearch" style="margin-top: 10px;"/>
 				</label>
 				</div>
@@ -71,12 +70,12 @@ layout: "home"
 		};
 
 	function genericKeyHandler(e){
-		var srcElement = e.srcElement,
-			handlerName = srcElement.dataset.keyuphandler,
+		var target = e.target || e.srcElement,
+			handlerName = target.dataset.keyuphandler,
 			handler = keyHandlerMap[handlerName];
-		
+
 		if(handler){
-			handler.call(srcElement, e);
+			handler.call(target, e);
 		}
 	}
 
@@ -84,7 +83,8 @@ layout: "home"
 		var enterCode = 13;
 
 		if(e.keyCode === enterCode){
-			location.href = '/thesaurus/#search=' + this.value
+			search();
+			//location.href = '/thesaurus/#search=' + this.value
 		}
 	}
 
@@ -92,6 +92,6 @@ layout: "home"
 
 	function search(){
 		var searchstring = document.getElementById('searchstring').value;
-		location.href = 'http://histograph.io/viewer/#search=' + searchstring;
+		location.href = '/thesaurus/#search=' + searchstring;
 	}
 </script>
