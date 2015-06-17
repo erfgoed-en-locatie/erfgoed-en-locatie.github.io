@@ -1,5 +1,5 @@
 ---
-title: Standaardiseertool
+title: Plaatsnamen standaardiseren
 introduction: standaardiseert (historische) plaatsnamen batchgewijs
 ---
 

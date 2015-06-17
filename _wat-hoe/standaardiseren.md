@@ -44,7 +44,7 @@ Handmatig de juiste URI's vinden kan via [ErfGeo.nl](http://erfgeo.nl) of rechts
 Bij grotere hoeveelheden data is het handiger een technisch iemand te vragen de data tegen een [API](https://en.wikipedia.org/wiki/Web_API) aan te houden. GeoNames heeft een API, TGN is als linked open data gepubliceerd en heeft een sparql endpoint. De [ErfGeo API](/tools/api.html) levert TGN, GeoNames en eigen URI's, en kent, weliswaar beperkt tot Nederland, bovendien allerlei historische plaatsnaamvarianten.
 
 
-Om ook niet-programmeurs grotere hoeveelheden data in een semi-automatisch proces te laten standaardiseren, heeft Erfgoed & Locatie een [standaardiseertool]() laten ontwikkelen. Deze tool laat je een csv-bestand met te standaardiseren plaatsnamen uploaden, standaardiseert er zelf zoveel mogelijk, en biedt voor de overige gevallen een interface waarin je zelf keuzes kan maken of URI's in kan voeren.
+Om ook niet-programmeurs grotere hoeveelheden data in een semi-automatisch proces te laten standaardiseren, heeft Erfgoed & Locatie een [standaardiseertool](/tools/standaardiseren.html) laten ontwikkelen. Deze tool laat je een csv-bestand met te standaardiseren plaatsnamen uploaden, standaardiseert er zelf zoveel mogelijk, en biedt voor de overige gevallen een interface waarin je zelf keuzes kan maken of URI's in kan voeren.
 
 
 
