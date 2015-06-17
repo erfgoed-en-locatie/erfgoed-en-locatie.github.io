@@ -67,14 +67,13 @@ Nog even op een rij:
 <table>
 <tr><th>Type</th><th>URI</th></tr>
 <tr><td>plaats</td><td>TGN, GeoNames</td></tr>
-<tr><td>gemeente</td><td>Gemeentegeschiedenis*</td></tr>
+<tr><td>gemeente</td><td>Gemeentegeschiedenis</td></tr>
 <tr><td>straat</td><td>ErfGeo URI op basis van samengesteld NWB id</td></tr>
 <tr><td>gebouw</td><td>ErfGeo URI op basis van BAG id</td></tr>
 <tr><td>adres</td><td>ErfGeo URI op basis van BAG id</td></tr>
 <tr><td>anders, bijv. verdwenen dorp</td><td>ErfGeo URI</td></tr>
 </table>
 
-* Huidige gemeentes zijn ook, en nieuwe gemeentes eerder, bij GeoNames te vinden
 
 ##Persistentie 
 
