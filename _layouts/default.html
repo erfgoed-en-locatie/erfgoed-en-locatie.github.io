@@ -20,10 +20,12 @@
         <div class="row">
 
           <div class="nine columns" id="content">
-
             <h1>{{ page.title }}</h1>
             {{ content }}
-          
+            {% if page.post_author %}
+              <em>door: {{ page.post_author }}</em>
+            {% endif %}
+            
           </div>
         
         </div>
