@@ -1,5 +1,9 @@
 ---
-title: Plaatsnamen standaardiseren
+title: Standaardiseertool
 introduction: standaardiseert (historische) plaatsnamen batchgewijs
-customUrl: http://locatienaaruri.erfgeo.nl/
 ---
+
+
+Deze tool maakt het batchgewijs standaardiseren van plaatsnamen mogelijk. Voor gevallen waarin de tool geen eenduidige oplossing vindt, biedt ze een interface waarin keuzes gemaakt en oplossingen ingevoerd kunnen worden.
+
+De tool is aangesloten op de [ErfGeo API](/tools/api.html), die veel historische plaatsnaamvarianten kent.
