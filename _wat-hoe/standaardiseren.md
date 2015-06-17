@@ -47,6 +47,13 @@ Bij grotere hoeveelheden data is het handiger een technisch iemand te vragen de 
 Om ook niet-programmeurs grotere hoeveelheden data in een semi-automatisch proces te laten standaardiseren, heeft Erfgoed & Locatie een [standaardiseertool](/tools/standaardiseren.html) laten ontwikkelen. Deze tool laat je een csv-bestand met te standaardiseren plaatsnamen uploaden, standaardiseert er zelf zoveel mogelijk, en biedt voor de overige gevallen een interface waarin je zelf keuzes kan maken of URI's in kan voeren.
 
 
+##Welke URI voor welk type?
+
+In de voorbeelden hierboven betrof het steeds plaatsen en een enkele gemeente. Maar het kan ook om straten, adressen of gebouwen gaan. Of om de departementen die we hier kortstondig in de Franse Tijd hadden. Of om verdwenen plaatsen die TGN of GeoNames nooit gehaald hebben. Welke identifiers of URI's gebruik je in die gevallen?
+
+Voor huidig Nederland kunnen we toe met de 'Big Five': voor plaatsen TGN of GeoNames, voor gemeenten Gemeentegeschiedenis (dat elke gemeente op een eigen URI desgewenst als html, json of rdfxml ontsluit), voor straten het Nationaal Wegenbestand (NWB) en voor gebouwen en adressen de Basisadministratie Adressen en Gebouwen (BAG).
+
+
 
 
 
