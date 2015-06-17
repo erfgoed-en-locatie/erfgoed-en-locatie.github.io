@@ -1,5 +1,5 @@
 ---
-title: Standaardiseren
+title: Plaatsaanduidingen standaardiseren
 excerpt: Verrijk je metadata door plaats-, gemeente- en straatnamen te standaardiseren
 ---
 
@@ -18,7 +18,7 @@ die `NH` en `N.H.` omzet naar `Noord-Holland`. Maar dit kost tijd, er blijven al
 
 ##Verbinden met andere data
 
-De tweede reden is dus 'verbindbaarheid'. Als je nou een algemeen gebruikte identificatiecode zou kunen gebruiken, dan heb je van al die verschillende schrijfwijzes geen last meer. Geografische thesauri als TGN en GeoNames leveren dergelijk identificatiecodes. De GeoNames code voor de Noord-Hollandse plaats Bergen is `2759154`. Voor de gemeente Bergen heeft GeoNames een andere code, dat is `2759151`.
+De tweede reden is dus 'verbindbaarheid'. Als je nou een algemeen gebruikte identificatiecode zou kunnen gebruiken, dan heb je van al die verschillende schrijfwijzes geen last meer. Geografische thesauri als TGN en GeoNames leveren dergelijk identificatiecodes. De GeoNames code voor de Noord-Hollandse plaats Bergen is `2759154`. Voor de gemeente Bergen heeft GeoNames een andere code, dat is `2759151`.
 
 Als mens is het wel even slikken als je `2759154` ziet staan. Daarom zou ik altijd twee velden aanmaken: één met de machineleesbare code, en één met een voor mensen begrijpelijk label dat daarbij hoort. Je hoeft je bij dat label dan natuurlijk niet meer druk te maken over de juiste schrijfwijze - `Den Haag, ZH`, `'s Gravenhage` en `The Hague` mogen allemaal.
 
@@ -31,14 +31,14 @@ Als je nou in plaats van de identificatiecode een URI gebruikt, dan kunnen zowel
 Aan de URI zie je ook meteen waar de identificatiecode vandaan komt. En is het mogelijk in één veld identificatiecodes van verschillende bronnen te gebruiken zonder in de problemen te komen. TGN levert ook URI's voor plaatsaanduidingen - die voor Bergen is [http://vocab.getty.edu/tgn/7007058](http://vocab.getty.edu/tgn/7007058). Had je alleen de identificatiecode `2759154` gehad en gedacht dat het een TGN code was, dan was je in [West Fork Brush Creek](http://vocab.getty.edu/tgn/2759154) terecht gekomen.
 
 
-##Standaardiseren met coördinaten - een minder goed idee
+##Standaardiseren met coördinaten, is dat niet voldoende?
 
-Geo-informatici opperen vaak dat je alleen met geometrie ook alles oplost. Dat is niet waar. Op basis van coördinaten weet je wel dat het om het Noord-Hollandse Bergen gaat, maar niet of het de plaats of gemeente betreft. Data verbinden op basis van coördinaten lukt wel, maar vraagt altijd enige inspanning - de eigenaar van de andere dataset heeft zijn puntje misschien vijftig of vijfhonderd meter verderop geprikt. En de verrijking gaat niet verder dan de coördinaten zelf.
+Geo-informatici opperen vaak dat je alleen met geometrie ook alles oplost. Dat is niet waar. Op basis van coördinaten weet je wel dat het om het Noord-Hollandse Bergen gaat, maar niet of het de plaats of gemeente betreft. Data verbinden op basis van coördinaten lukt wel, maar vraagt altijd enige inspanning - de eigenaar van de andere dataset heeft zijn puntje misschien vijftig of vijfhonderd meter verderop geprikt. En de verrijking gaat niet verder dan de coördinaten zelf, terwijl je bij TGN of GeoNames naast coördinaten ook nog hiërarchische gegevens, alternatieve namen, etc. tot je beschikking hebt.
 
 
 ##Handmatig of geautomatiseerd standaardiseren
 
-Handmatig de juiste URI's vinden kan via [ErfGeo.nl](http://erfgeo.nl) of rechtstreeks bij de organisatie die de URI's die je wilt gebruiken uitgeeft, [TGN](http://vocab.getty.edu/) of [GeoNames](http://www.geonames.org/) bijvoorbeeld. Let er bij GeoNames op dat de URI als domein `sws.geonames.org` heeft, maar dat Geonames je de informatie toont op domein `www.geonames.org`.
+Handmatig de juiste URI's vinden kan via de thesaurus van [ErfGeo.nl](http://erfgeo.nl) of rechtstreeks bij de organisatie die de URI's die je wilt gebruiken uitgeeft, [TGN](http://vocab.getty.edu/) of [GeoNames](http://www.geonames.org/) bijvoorbeeld. Let er bij GeoNames op dat een URI als domein `sws.geonames.org` heeft, maar dat Geonames je de informatie toont op domein `www.geonames.org`.
 
 
 Bij grotere hoeveelheden data is het handiger een technisch iemand te vragen de data tegen een [API](https://en.wikipedia.org/wiki/Web_API) aan te houden. GeoNames heeft een API, TGN is als linked open data gepubliceerd en heeft een sparql endpoint. De [ErfGeo API](/tools/api.html) levert TGN, GeoNames en eigen URI's, en kent, weliswaar beperkt tot Nederland, bovendien allerlei historische plaatsnaamvarianten.
