@@ -4,7 +4,6 @@ excerpt: Verrijk je metadata door plaats-, gemeente- en straatnamen te standaard
 post_author: Menno den Engelse
 ---
 
-Door: Menno den Engelse
 Er zijn drie goede redenen om topografische elementen te standaardiseren.
 
 ##Eenduidigheid
