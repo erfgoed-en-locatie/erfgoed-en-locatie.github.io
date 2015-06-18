@@ -34,11 +34,6 @@ Voor de meest up to date versie van alle types; zie het <a href="https://raw.git
 ##Zoeken op type
 Naar al deze types kan ook specifiek gezocht worden:
 
-
-###Zoek in alle types naar "Woerden":
-
-- <a href="http://erfgeo.nl/thesaurus/#search=woerden">erfgeo.nl/thesaurus/#search=woerden</a>
-
 ###Zoek naar de gemeente "Woerden"
 
 - <a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Municipality">erfgeo.nl/thesaurus/#search=woerden type=hg:Municipality</a>
@@ -50,6 +45,11 @@ Naar al deze types kan ook specifiek gezocht worden:
 ###Zoek naar straten die "Woerden" bevatten
 
 - <a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Street">erfgeo.nl/thesaurus/#search=woerden type=hg:Street</a>
+
+Ook hele andere dingen zijn mogelijk:
+
+###Laat alle provincies zien
+- <a href="http://erfgeo.nl/thesaurus/#search=*%20type=hg:Province">erfgeo.nl/thesaurus/#search=*%20type=hg:Province</a>
 
 ##Hierarchische relatie tussen PiTs
 
