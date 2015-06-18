@@ -19,7 +19,7 @@ die `NH` en `N.H.` omzet naar `Noord-Holland`. Maar dit kost tijd, er blijven al
 
 ##Verbinden met andere data
 
-De tweede reden is dus 'verbindbaarheid'. Als je nou een algemeen gebruikte identificatiecode zou kunnen gebruiken, dan heb je van al die verschillende schrijfwijzes geen last meer. Geografische thesauri als TGN en GeoNames leveren dergelijk identificatiecodes. De GeoNames code voor de Noord-Hollandse plaats Bergen is `2759154`. Voor de gemeente Bergen heeft GeoNames een andere code, dat is `2759151`.
+De tweede reden is dus 'verbindbaarheid'. Als je nou een algemeen gebruikte identificatiecode zou kunnen gebruiken, dan heb je van al die verschillende schrijfwijzes geen last meer. Geografische thesauri als TGN en GeoNames leveren dergelijke identificatiecodes. De GeoNames code voor de Noord-Hollandse plaats Bergen is `2759154`. Voor de gemeente Bergen heeft GeoNames een andere code, dat is `2759151`.
 
 Als mens is het wel even slikken als je `2759154` ziet staan. Daarom zou ik altijd twee velden aanmaken: één met de machineleesbare code, en één met een voor mensen begrijpelijk label dat daarbij hoort. Je hoeft je bij dat label dan natuurlijk niet meer druk te maken over de juiste schrijfwijze - `Den Haag, ZH`, `'s Gravenhage` en `The Hague` mogen allemaal.
 
