@@ -77,7 +77,7 @@ Nog even op een rij:
 
 ##Persistentie 
 
-Het gevaar dat altijd op de loer ligt is dat een URI niet persistent kan blijken te zijn. ErfGeo zelf is nog bezig hier een strategie voor te ontwikkelen. Wat moet ErfGeo bijvoorbeeld doen wanneer een nieuwe versie van een dataset wordt aangeleverd en daar elementen uit verdwenen zijn? BAG en NWB willen vooral de huidige stand van zaken beschrijven. Als een gebouw gesloopt wordt, zal het ook uit de BAG verwijderd worden.
+Het gevaar dat altijd op de loer ligt is dat een URI niet persistent kan blijken te zijn. ErfGeo zelf is nog bezig hier een strategie voor te ontwikkelen. Wat moet ErfGeo bijvoorbeeld doen wanneer een nieuwe versie van een dataset wordt aangeleverd en daar elementen uit verdwenen zijn? BAG en NWB willen vooral de huidige stand van zaken beschrijven. Als een straat fysiek verdwijnt, dan zal die ook uit het NWB geschrapt worden.
 
 
 
