@@ -20,7 +20,7 @@ GeoJSON is een open formaat om geografische gegevens in op te slaan en mee uit t
 
 Wil je visualisaties maken op basis van geografische informatie, dan is [QGIS](http://www.qgis.org/nl/site/) waarschijnlijk de beste en in ieder geval de goedkoopste kandidaat. Vanzelfsprekend leest en schrijft QGIS GeoJSON probleemloos.
 
-Maar de knoppenbalken in Qgis kunnen nogal intimiderend overkomen en de kans bestaat, zeker als je alleen wat simpele bewerkingen wilt doen, dat je liever in je vertrouwde vector programma werkt.
+Maar de knoppenbalken in QGIS kunnen nogal intimiderend overkomen en de kans bestaat, zeker als je alleen wat simpele bewerkingen wilt doen, dat je liever in je vertrouwde vector programma werkt.
 
 Onderstaande afbeelding, die de gemeente De Rijp (rood) toont, de fusie met Graft (lichtrood), de gebiedsuitbreidingen (roze) en tenslotte de opname in Alkmaar (blauw) is gemaakt in [Sketch](http://bohemiancoding.com/sketch/), een vector programma voor de Mac. Maar het had ook in het gratis [Inkscape](https://inkscape.org/nl/) of in het elke maand wederom te betalen Illustrator of elk ander programma gemaakt kunnen worden. Zolang het maar svg-bestanden leest.
 
@@ -30,7 +30,7 @@ Onderstaande afbeelding, die de gemeente De Rijp (rood) toont, de fusie met Graf
 
 Het daadwerkelijke omzetten van de GeoJSON naar svg heb ik op [mapstarter.com](http://mapstarter.com/) gedaan. Om de GeoJSON zelf te krijgen had ik naar de respectieve detailpagina's van gemeente [De Rijp](http://thesaurus.erfgeo.nl/pit/gemeentegeschiedenis-geometries/De_Rijp-1812), [Graft-De Rijp](http://thesaurus.erfgeo.nl/hgconcept/geonames/2755374) en [Alkmaar](http://thesaurus.erfgeo.nl/pit/bestuurlijke-grenzen-gemeenten-actueel/0361) kunnen gaan.
 
-In plaats daarvan heb ik, als aangekondigd, mijn voordeel gedaan met de api. Ik heb de api gevraagd naar geoconcepten van het type gemeente (hg:Municipality) die "De Rijp" of "Alkmaar" in de naam hebben: [https://api.erfgeo.nl/search?q="De Rijp"&#124;"Alkmaar"&type=hg:Municipality](https://api.erfgeo.nl/search?q="De Rijp"&#124;"Alkmaar"&type=hg:Municipality). Zo had ik alle geometrieën in één keer.
+In plaats daarvan heb ik, als aangekondigd, mijn voordeel gedaan met de api. Ik heb de api gevraagd naar geoconcepten van het type gemeente (hg:Municipality) die "De Rijp" of "Alkmaar" in de naam hebben: [https://api.erfgeo.nl/search?q="De Rijp"&#124;"Alkmaar"&type=hg:Municipality](https://api.erfgeo.nl/search?q="De Rijp"&#124;"Alkmaar"&type=hg:Municipality). Zo had ik alle geometrieën in één keer, in de juiste schaal en op de juiste plaats ten opzichte van elkaar.
 
 We hadden de api ook kunnen vragen naar alle departementen uit de Franse tijd: <a href="https://api.erfgeo.nl/search?q=*&type=hg:Departement">https://api.erfgeo.nl/search?q=*&amp;type=hg:Departement</a>
 
