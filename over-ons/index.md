@@ -5,7 +5,7 @@
 
 De erfgeo thesaurus en tools zijn ontwikkeld bij <a
 href="http://waag.org/">Waag Society</a> in het kader van het project <a
-href="http://erfgoedenlocatie.nl/">Erfgoed & Locatie</a> onder coördinatie van
+href="http://erfgoedenlocatie.nl/">Erfgoed & Locatie</a> met ondersteunende medewerking van <a href="https://www.linkedin.com/profile/view?id=50149590">Ralph Kits</a> bij
 <a href="http://www.den.nl">Digitaal Erfgoed Nederland (DEN)</a>. 
 
 Het ontwikkelteam dat onder de leiding van <a
