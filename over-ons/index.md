@@ -49,3 +49,5 @@ de <a href="http://erfgoedenlocatie.nl/projectbeschrijving/partners/">projectpar
 en het project an sich vindt u op de
 <a href="http://erfgoedenlocatie.nl/projectbeschrijving/projectteam/">projectwebsite</a>.
 
+Voor vragen over de inhoud van deze website of de werking van de tools kunt u het beste maile naar erfgoedenlocatie[at]den.nl
+
