@@ -1,7 +1,7 @@
 ---
 title: Hacking Heritage Talk 17 September
 created: 2015-06-02
-excerpt: Op 17 September vindt het grote
+excerpt: Afsluiting Erfgoed & Locatie
 ---
 
 Op donderdag 17 september 2015 sluiten Waag Society en Digitaal Erfgoed Nederland (DEN) het Hacking Heritage-programma van het project <a href="http://erfgoedenlocatie.nl/">Erfgoed & Locatie</a> af met een grote finale voor de erfgoedsector. 
