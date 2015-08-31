@@ -1,4 +1,5 @@
 ---
+priority: 1
 title: Plaatsnamen standaardiseren
 introduction: standaardiseert (historische) plaatsnamen batchgewijs
 ---

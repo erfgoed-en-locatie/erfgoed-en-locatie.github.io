@@ -25,7 +25,8 @@ layout: "home"
 
 	<div class="six columns">
 		<h1><a href="/wat-hoe/index.html">Wat? Hoe?</a></h1>
-		{% for item in site.wat-hoe limit:2 %}
+		{% assign wathoe = site.wat-hoe | sort: 'priority' %}
+		{% for item in wathoe limit:2 %}
 
 		  <a href="{{ item.url }}">{{ item.title }}</a><br />
 		{% endfor %}
@@ -41,7 +42,8 @@ layout: "home"
 
 		<h1><a href="/nieuws/index.html">Nieuws</a></h1>
 
-		{% for item in site.nieuws limit:1 %}
+		{% assign nieuws = site.nieuws | sort: 'priority' %}
+		{% for item in nieuws limit:1 %}
 
 		  <a href="{{ item.url }}">{{ item.title }}</a><br />
 		  <p>{{ item.excerpt }}</p>
@@ -53,7 +55,8 @@ layout: "home"
 
 	<div class="six columns">
 		<a href="/tools/index.html"><h1>Tools</h1></a><br>
-		{% for item in site.tools %}
+		{% assign tools = site.tools | sort: 'priority' last %}
+		{% for item in tools %}
 		  {% if item.customUrl %}
 		  	<a href="{{ item.customUrl }}">{{ item.title }}</a><br />
 		  {% else %}

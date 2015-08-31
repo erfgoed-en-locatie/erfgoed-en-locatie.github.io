@@ -4,7 +4,8 @@
 
 
 <div class="content-block">
-{% for item in site.tools %}
+{% assign items = site.tools | sort: 'priority' %}
+{% for item in items %}
   {% if item.customUrl %}
   <h3><a href="{{ item.customUrl }}">{{ item.title }}</a></h3>
   	<p>{{ item.introduction }}</p>
@@ -13,4 +14,4 @@
   	<p>{{ item.introduction }}</p>
   {% endif %}
 {% endfor %}
-</div>
+</div>	
