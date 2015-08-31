@@ -40,7 +40,7 @@ layout: "home"
         
 	<div class="six columns">
 
-		<h1><a href="/nieuws/index.html">Nieuws</a></h1>
+		<h1><a href="/nieuws/index.html">Blog</a></h1>
 
 		{% assign nieuws = site.nieuws | sort: 'priority' %}
 		{% for item in nieuws limit:1 %}
