@@ -9,7 +9,7 @@
             
               {% assign url = page.url | replace_first:'/','' | split:"/" | first %}
               {% if item.name == url %}
-              <a class="menu-item current" href="{{ site.baseurl }}/{{ item.name }}">
+                <a class="menu-item current" href="{{ site.baseurl }}/{{ item.name }}">
               {% else %}
                 {% if item.notLocal %}
                   <a class="menu-item" href="{{ item.name }}">

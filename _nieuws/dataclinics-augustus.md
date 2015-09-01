@@ -2,6 +2,7 @@
 title: Dataclinics inspiratie voor praktische toepassingen geocoder
 created: 2015-08-31
 excerpt: De Historische Geocoder in de praktijk - archieven op zoek naar adressen en gebouwen
+post_author: Menno den Engelse
 ---
 
 Een aantal dataclinics in augustus, waar zowel erfgoedinstellingen als ontwikkelaars van de Geocoder aanwezig waren, heeft goed in beeld gebracht hoe de geocoder in de praktijk gebruikt kan gaan worden. Gebouwen en adressen spelen een belangrijke rol.
