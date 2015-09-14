@@ -218,7 +218,7 @@ var ConceptsBoxListItem = React.createClass({displayName: "ConceptsBoxListItem",
         ),
         React.createElement("div", {className: "buttons"},
           //React.createElement("button", {className: "details", onClick: this.details, title: "Show concept's details"}, "Details..."), 
-          React.createElement("a", {className: "details", title: "Show concept's details", href: 'http://thesaurus.erfgeo.nl/hgconcept/' + this.props.feature.properties.pits[0].hgid }, "Details..."),
+          React.createElement("a", {className: "details", title: "Show concept's details", href: 'http://thesaurus.erfgeo.nl/hgconcept/?id=' + this.props.feature.properties.pits[0].hgid }, "Details..."),
           React.createElement("button", {className: "zoom", onClick: this.zoom, title: "Zoom and pan map to concept"}, "Zoom"),
           React.createElement("button", {className: "select", onClick: this.select, title: "Highlight concept on map (and fade others)"}, "Select")
         ),
