@@ -2,6 +2,7 @@
 title: Data toevoegen aan ErfGeo
 excerpt: Erfgoedinstellingen kunnen zelf een dataset met PiTs maken en aanleveren. Maar hoe maak je zo'n dataset?
 post_author: Menno den Engelse
+priority: 6
 ---
 
 Er zit inmiddels [flink wat data](/wat-hoe/watvoordata.html) in ErfGeo. Maar hoe voeg je er data aan toe? Of, specifieker, hoe voeg je er temporele gegevens aan toe?

@@ -2,6 +2,7 @@
 title: PiTs, HgConcepten en Relaties
 excerpt: Wat zijn toch die fameuze PiTs? En hoe worden hgConcepten samengesteld? Hoe zit, kortom, de ErfGeo data in elkaar?
 post_author: Menno den Engelse
+priority: 2
 ---
 
 ErfGeo bevat data uit vele bronnen. Elk van die bronnen kan informatie bevatten over een bepaalde straat, plaats, etc. Zo'n beschrijving van één zo'n plaats of straat in één dataset noemen we een PiT.

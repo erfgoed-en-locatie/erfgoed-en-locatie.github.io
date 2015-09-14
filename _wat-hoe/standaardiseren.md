@@ -2,6 +2,7 @@
 title: Plaatsaanduidingen in metadata standaardiseren
 excerpt: Verrijk je metadata door plaats-, gemeente- en straatnamen te standaardiseren
 post_author: Menno den Engelse
+priority: 4
 ---
 
 Er zijn drie goede redenen om topografische elementen te standaardiseren.
