@@ -1,0 +1,506 @@
+/* Fonts
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Bree Serif';
+  src: url("../fonts/BreeSerif-Regular.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Semibold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-SemiboldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url("../fonts/Inconsolata-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Style
+   ========================================================================== */
+
+body {
+  font-family: "Open Sans";
+}
+
+h5 {
+  font-weight: lighter;
+}
+
+h5 code {
+  font-weight: normal;
+}
+
+.hidden {
+  display: none;
+}
+
+.right {
+  float: right;
+}
+
+.id {
+  font-family: 'Inconsolata';
+  font-size: 1.5rem;
+}
+
+.box-container {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  pointer-events: none;
+}
+
+.box-container-padding {
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.indent {
+  margin-left: 1em;
+}
+
+.padding {
+  padding: .8em;
+/*  padding: 7px;*/
+}
+
+.side-padding {
+  padding: 0 .8em;
+}
+
+.cell-padding {
+  padding-top: 6px;
+}
+
+#map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  pointer-events: all;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.34)
+}
+
+#sidebar-container {
+  left: 0;
+  width: 450px /* $sidebar-width */;
+}
+
+#graph-container {
+  left: 450px /*$sidebar-width*/;
+  right: 0;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#search-box {
+  margin-bottom: 10px;
+}
+
+#search-box img {
+  height: 38px;
+  margin-right: 7px;
+  float: left;
+  display: none;
+}
+
+#search-box input {
+  margin: 0;
+}
+
+input[type="search"]:focus {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.list-box {
+  width: 100%;
+  max-height: calc(100% - 72px);
+  overflow-y: auto;
+}
+
+.box .float-right {
+  float: right;
+}
+
+.geometry-type {
+  width: 25px;
+  height: 25px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+.geometry-type-point {
+  background-image: url(../images/geometry-types_point.svg);
+}
+
+.geometry-type-line {
+  background-image: url(../images/geometry-types_line.svg);
+}
+
+.geometry-type-polygon {
+  background-image: url(../images/geometry-types_polygon.svg);
+}
+
+/*.concept*/ table {
+/*  width: 100%;
+  table-layout: fixed;
+  word-break: break-word;*/
+  word-wrap: break-word;
+  table-layout: fixed;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/*.concept*/ table td {
+  vertical-align: top;
+}
+/*
+table td a {
+  word-wrap: break-word;
+}
+*/
+table td:first-child {
+  width: 70px;
+}
+
+/*.concept*/ table th,
+/*.concept*/ table td {
+  border-bottom-style: none;
+  padding: 6px 6px 6px 0px;
+}
+
+table tr:not(:last-child) {
+  border-bottom-color: rgba(100,100,100,0.1);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+/*.concept*/ table tr td.label {
+  //text-align: right;
+}
+
+/*.concept*/ table tr td.label:after {
+  content: ':';
+}
+
+.place-name,
+.concept-alt-name {
+  font-style: italic;
+}
+
+.place-name:before,
+.concept-alt-name:before {
+  content: '“';
+}
+
+.place-name:after {
+  content: "”";
+}
+
+.concept-alt-name:after  {
+  content: "”, ";
+}
+
+.concept-alt-name:last-child:after  {
+  content: "” ";
+}
+
+.dataset-list > *:not(:last-child):after {
+  content: ", ";
+}
+
+.geometry-type-list span *.filtered,
+.dataset-list span *.filtered {
+  opacity: 0.5;
+}
+
+.type-header {
+  float: right;
+  opacity: 0.5;
+}
+
+.results {
+}
+
+.list {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.list li {
+  margin-bottom: 0;
+  clear: both;
+
+  cursor: pointer;
+}
+
+.clear {
+  clear: both;
+}
+
+.faded {
+  opacity: 0.45;
+}
+
+.list li {
+  padding-top: 0.8em;
+  padding-bottom: 0.2em;
+}
+
+.list li {
+
+}
+
+.list li.pit:not(:last-child) {
+  margin-bottom: 0;
+}
+
+h5 {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  margin-bottom: 1px;
+  padding-bottom: 4px;
+}
+
+.box h5 code {
+  float: right;
+}
+
+.dataset-list {
+  font-family: 'Inconsolata';
+  font-size: 16px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.dataset-list li {
+  display: inline-block;
+}
+
+.show-details {
+  float: right;
+}
+
+.buttons {
+  float: right;
+}
+
+button {
+  background-color: white;
+  text-transform: none;
+  font-size: 1.5rem;
+  margin-left: 10px;
+
+  height: 35px;
+  line-height: 35px;
+  padding: 0 13px;
+  font-weight: lighter;
+}
+
+button.details {
+  font-weight: bold;
+}
+
+#graph-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#graph {
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+}
+
+#app .container {
+  margin-top: 20px;
+}
+
+.drop-shadow {
+  box-shadow: 0px 0px 2px 2px rgba(200, 200, 200, 0.5);
+}
+
+#pit-name-filter {
+  height: 3rem;
+  margin-top: -2px;
+  padding: 6px 10px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+h6 {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-bottom: 1px;
+  padding-bottom: 5px;
+}
+
+.geometry-type-list span:not(:last-child):after,
+.sort-fields span:not(:last-child):after {
+  content: ", ";
+}
+
+.sort-fields span a.selected {
+  font-weight: bold;
+}
+
+#loop-pits img {
+  position: relative;
+  top: 4px;
+}
+
+
+.graph-hgid {
+  font-family: monospace;
+}
+
+#graph path {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 1.5px;
+  marker-end: url(#marker-arrow);
+}
+
+#marker-arrow path {
+  fill: #aaa;
+}
+
+#graph #licensing {
+  fill: green;
+}
+
+#graph .link.licensing {
+  stroke: green;
+}
+
+.link.resolved {
+  stroke-dasharray: 0,2 1;
+}
+
+.graph-pit {
+  fill: white;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+text {
+  font-size: 15px;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+.pit {
+/*  padding-left: 36px;*/
+}
+
+.box ul:last-child,
+.box p:last-child {
+  margin-bottom: 0;
+}
+
+#options-container {
+  left: 450px;
+  width: 450px;
+}
+
+td.links span:not(:last-child):after {
+  content: ',\00a0';
+  text-decoration: none;
+  cursor: default;
+  display: inline-block;
+}
+
+p.examples a:not(:last-child):after {
+  content: ',\00a0';
+  text-decoration: none;
+  cursor: default;
+  display: inline-block;
+}
+
+#search-options {
+
+}
