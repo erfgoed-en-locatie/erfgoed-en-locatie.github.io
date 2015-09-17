@@ -9,7 +9,7 @@ Wat ErfGeo is, laat zich het best uitleggen door de data die het bevat.
 
 ##Sircxsee en andere toponiemen
 
-In oude bronnen kom je soms plaatsnamen tegen waar je als mens toch even over na moet denken. Cuelborch, dat zal Culemborch zijn. Gaude is Gouda, Haghe Den Haag, Swol Zwolle en Sircxsee, dat is [Zierikzee](http://thesaurus.erfgeo.nl/hgconcept/tgn/7030107). Voor een computer wordt dat al erg lastig. En dat Weerdt op Valkenswaard slaat, Traiecto op Maastricht, Vorcum op Woudrichem en Buscoducis op Den Bosch, dat is voor zowel mens als machine zonder achterliggende kennis lastig te doorzien.
+In oude bronnen kom je soms plaatsnamen tegen waar je als mens toch even over na moet denken. Cuelborch, dat zal Culemborch zijn. Gaude is Gouda, Haghe Den Haag, Swol Zwolle en Sircxsee, dat is [Zierikzee](http://thesaurus.erfgeo.nl/hgconcept/?id=http://vocab.getty.edu/tgn/7030107). Voor een computer wordt dat al erg lastig. En dat Weerdt op Valkenswaard slaat, Traiecto op Maastricht, Vorcum op Woudrichem en Buscoducis op Den Bosch, dat is voor zowel mens als machine zonder achterliggende kennis lastig te doorzien.
 
 Dankzij datasets als de rekeningen van de Illustre Lieve Vrouwe Broederschap, Militieregisters en het herkomstonderzoek van Simon Hart kent ErfGeo tienduizenden plaatsnaamvarianten. Alleen voor Zierikzee zijn het er al bijna twintig. Omdat we uit veel bronnen ook de periode kunnen halen waarin een naamvariant gebruikt werd, kan je mooi zien [wanneer](http://www.islandsofmeaning.nl/projects/names-in-time/?uri=http://vocab.getty.edu/tgn/7030107) welke variant in zwang was.
 
@@ -20,7 +20,7 @@ Dankzij datasets als de rekeningen van de Illustre Lieve Vrouwe Broederschap, Mi
 
 De Atlas van de verstedelijking in Nederland toont van de 35 grootste steden van het land hoe zij in de loop der eeuwen expandeerden. De voor het boek gemaakte geometrieën zijn opgenomen in ErfGeo.
 
-Van [Zwolle](http://thesaurus.erfgeo.nl/hgconcept/tgn/7007077) zijn bijvoorbeeld geometrieën uit 1200, 1350, 1500, 1650, 1900, 1950, 1980 en 2010 beschikbaar. 
+Van [Zwolle](http://thesaurus.erfgeo.nl/hgconcept/?id=http://vocab.getty.edu/tgn/7007077) zijn bijvoorbeeld geometrieën uit 1200, 1350, 1500, 1650, 1900, 1950, 1980 en 2010 beschikbaar. 
 
 [![Zwolle](/images/zwolle.png)](http://nieneb.github.io/verstedelijking/)
 
@@ -28,7 +28,7 @@ Van [Zwolle](http://thesaurus.erfgeo.nl/hgconcept/tgn/7007077) zijn bijvoorbeeld
 
 In de Franse tijd is ook Nederland kortstondig ingedeeld in departementen. Bij een nieuwe indeling in 1811 werden de departementen vooral vernoemd naar waterlopen: Monden van de Rijn, Monden van de Schelde, Westereems, Zuiderzee, Boven-IJssel, etc. Alleen Friesland hield haar oude naam.
 
-Behalve de ligging der departementen laten [de geometrieën](http://erfgeo.nl/thesaurus/#search=* type=hg:Departement) ook mooi de toenmalige kustlijn zien. Zo zie je in de kop van departement Zuiderzeé het eiland Wieringen nog liggen.
+Behalve de ligging der departementen laten de geometrieën ook mooi de toenmalige kustlijn zien. Zo zie je in de kop van departement Zuiderzeé het eiland Wieringen nog liggen. Je kan alle departementen tevoorschijn halen door naar de [viewer](http://erfgeo.nl/thesaurus/) te gaan en `*&type=hg:Departement` in het zoekboxje te typen.
 
 ![departementen](/images/departementen.png)
 
@@ -62,7 +62,7 @@ Ook hier geldt dat we zo een basis hebben waaraan we historische straatnamen kun
 
 De BAG (Basis Administratie Gebouwen en Adressen) bevat, zoals de naam al zegt, alle gebouwen en alle adressen van Nederland. Adressen zijn aangegeven met een puntlocatie, van elk gebouw is een polygoon beschikbaar.
 
-Aardig is dat de BAG niet alleen gegevens over de huidige stand van zaken bevat. Van elk pand is een bouwperiode opgenomen. Dit is verre van precies, en die precisie gaat bij bouwwerken van voor pakweg 1800 helemaal verloren, maar vanwege de landelijke dekking kan dit toch inzicht geven in de historie.
+Aardig is dat de BAG niet alleen gegevens over de huidige stand van zaken bevat - van elk pand is de bouwperiode opgenomen.
 
 ##Buitenland
 
