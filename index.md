@@ -8,12 +8,24 @@ layout: "home"
 	<div class="six columns">
 
 		<h1 style="margin-bottom: 10px;"><a href="/thesaurus">Thesaurus</a></h1>
-		<div id="searchbox">
-		<p>Zoek een plaats, gemeente, straat, etc.</p>
+
+		<a href="/thesaurus">Zoek via de viewer</a><br />
+		<a href="http://thesaurus.erfgeo.nl/">Tekstueel zoeken in de thesaurus</a><br />
+		<a href="http://thesaurus.erfgeo.nl/bronnen">Overzicht gebruikte datasets</a><br />
+		<!--
+		<div id="searchbox-oud">
+		<p>Bijvoorbeeld <a href="/thesaurus/#search=%22Heyloe%22">Heyloe</a>, 
+						<a href="/thesaurus/#search=%22Nieuwer Amstel%22">Nieuwer Amstel</a>, 
+						<a href="/thesaurus/#search=%22Worcum%22">Worcum</a>, 
+						<a href="/thesaurus/#search=%22Volksvlijt%22">Volksvlijt</a>, 
+						<a href="/thesaurus/#search=%22Morocco%22">Morocco</a>, 
+						<a href="/thesaurus/#search=%22Stalinlaan%22">Stalinlaan</a>, 
+						<a href="/thesaurus/#search=%22Monster%22">Monster</a>, 
+						<a href="/thesaurus/#search=%22Dorestad%22">Dorestad</a></p>
 			<div class="row">
 				<div class="eight columns">
 				<label>
-					<input type="text" class="u-full-width" id="searchstring" placeholder="bijv. spaarndam" data-keyuphandler="thesaurusSearch" style="margin-top: 10px;"/>
+					<input type="text" class="u-full-width" id="searchstring" placeholder="plaatsnaam, straatnaam, etc." data-keyuphandler="thesaurusSearch" style="margin-top: 10px;"/>
 				</label>
 				</div>
 				<div class="four columns">
@@ -21,6 +33,7 @@ layout: "home"
 				</div>
 			</div>
 		</div>
+		-->
 	</div>
 
 	<div class="six columns">

@@ -158,13 +158,25 @@ header .row{
   font-weight: normal;
 }
 
-.home-blocks #searchbox{
-  background-image:url(../images/dwingeloo.png);
-  padding: 20px 10px 0 10px;
+#searchbox{
+  padding: 0 10px 10px 0;
+  color: #000;
 }
 
-.home-blocks #searchbox button{
+#searchbox input{
+  margin-bottom: 0;
+}
+
+#searchbox button{
   margin-top: 10px;
+}
+#searchbox p{
+  font-size:12px;
+  margin-top:0;
+  margin-bottom: 20px;
+}
+#searchbox p a{
+  color: #000;
 }
 
 .home-blocks .row{
@@ -281,12 +293,13 @@ a:active, a:focus {
 }
 
 button.button-primary{
-  background-color:#6bc6de;
-  border-color:#6bc6de;
-}
-button.button-primary:hover{
   background-color:#000;
   border-color:#000;
+  font-size: 20px;
+}
+button.button-primary:hover{
+  background-color: $link-color;
+  border-color: $link-color;
 }
 
 .row.no-bottom-margin {
