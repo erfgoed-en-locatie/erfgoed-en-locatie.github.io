@@ -5,9 +5,9 @@ post_author: Menno den Engelse
 priority: 6
 ---
 
-Er zit inmiddels [flink wat data](/wat-hoe/watvoordata.html) in ErfGeo. Maar hoe voeg je er data aan toe? Of, specifieker, hoe voeg je er temporele gegevens aan toe?
+Er zit inmiddels [flink wat data](/wat-hoe/watvoordata.html) in ErfGeo. Maar hoe voeg je er data aan toe?
 
-Erfgoedinstellingen kunnen zelf een dataset met PiTs maken en aanleveren. Een medewerker van ErfGeo controleert en importeert de data vervolgens.
+Erfgoedinstellingen kunnen zelf een dataset met PiTs maken en aanleveren. Een medewerker van ErfGeo controleert en importeert de data vervolgens. Heb je hier hulp bij nodig, dan kan je altijd even contact opnemen.
 
 Dit artikel geeft een aantal voorbeelden van PiTs die je in zo'n dataset op kan nemen.
 
@@ -36,14 +36,20 @@ Wat wel mogelijk is, is een PiT maken in een eigen dataset. Als we die een relat
 		<td>nwb/de-rijp-wevershof</td>
 	</tr>
 	<tr>
-		<th>hasBeginning</th>
-		<td>1971</td>
+		<th>periodValidFor</th>
+		<td>existence</td>
+	</tr>
+	<tr>
+		<th>validSince</th>
+		<td>1970-1972</td>
 	</tr>
 </table>
 
+Elke PiT die we maken moet of een binnen de dataset uniek id hebben of een URI. Verder heeft een PiT meestal een naam en altijd een type. Met de laatste twee waarden in het voorbeeld hierboven zeggen we dat de straat die de nieuwe PiT beschrijft dezelfde is als het Wevershof in het Nationaal Wegenbestand en dat de straat ontstaan is tussen 1970 en 1972. 
 
-Elke PiT die we maken moet een binnen de dataset uniek id, een naam en een type hebben. Met de laatste twee waarden in het voorbeeld hierboven zeggen we dat de straat die de nieuwe PiT beschrijft dezelfde is als het Wevershof in het Nationaal Wegenbestand en dat de straat ontstaan is in 1971.
+De velden die de periode beschrijven, validSince en validUntil, mogen als datum `yyyy-mm-dd` of als jaar `yyyy` gegeven worden. Beide velden mogen ook als twee afzonderlijke waarden aangeleverd worden om een periode aan te geven, bijvoorbeeld met een veld validSince-minValue en een veld validSince-maxValue.
 
+Overigens geldt voor alle veldnamen: de precieze naamgeving maakt niet uit, tijdens het importeren worden de velden gemapt.
 
 ##Een historische straatnaam toevoegen
 
@@ -65,11 +71,15 @@ Met een PiT die de volgende velden bevat kunnen we die informatie toevoegen:
 		<td>hg:Street</td>
 	</tr>
 	<tr>
-		<th>isUsedFor</th>
+		<th>periodValidFor</th>
+		<td>toponym</td>
+	</tr>
+	<tr>
+		<th>sameHgConcept</th>
 		<td>nwb/de-rijp-t-achterom</td>
 	</tr>
 	<tr>
-		<th>hasEnd</th>
+		<th>validUntil</th>
 		<td>1970</td>
 	</tr>
 </table>
@@ -81,12 +91,12 @@ Met een PiT die de volgende velden bevat kunnen we die informatie toevoegen:
 
 Ontginning van veen zorgde ervoor dat in de 12e eeuw het riviertje De Bamestra uitgroeide tot een binnenzee, een meer dat in open verbinding stond met de Zuiderzee. Begin 17e eeuw werd het meer drooggemaakt.
 
-Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, maken we er eentje aan. En we geven de nieuwe PiT een geometrie. Een geometrie kan een punt, een lijn of een polygoon zijn. Een punt mag als twee velden (lengte- en breedtegraad) meegeleverd worden, in de andere gevallen is het verplicht geojson aan te leveren. De tool <a href="/tools/histodraw.html">Histodraw</a> maakt dat een relatief eenvoudige exercitie.
+Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, maken we er eentje aan. En we geven de nieuwe PiT een geometrie. Een geometrie kan een punt, een lijn of een polygoon zijn. Een punt mag als twee velden (lengte- en breedtegraad) meegeleverd worden, in de andere gevallen is het verplicht geojson aan te leveren. Een tool als <a href="/tools/histodraw.html">Histodraw</a> of [geojson.io](http://geojson.io) maakt dat een relatief eenvoudige exercitie.
 
 <table>
 	<tr>
 		<th>id</th>
-		<td>7</td>
+		<td>5</td>
 	</tr>
 	<tr>
 		<th>name</th>
@@ -97,12 +107,16 @@ Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, maken we er eentje aan. En 
 		<td>hg:Water</td>
 	</tr>
 	<tr>
-		<th>hasBeginning</th>
-		<td>1150</td>
+		<th>validSince</th>
+		<td>1150-1250</td>
 	</tr>
 	<tr>
-		<th>hasEnd</th>
-		<td>1612</td>
+		<th>validUntil</th>
+		<td>1607-1612</td>
+	</tr>
+	<tr>
+		<th>periodValidFor</th>
+		<td>existence</td>
 	</tr>
 	<tr>
 		<th>geometry</th>
@@ -110,13 +124,13 @@ Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, maken we er eentje aan. En 
 	</tr>
 </table>
 
-
+Op dezelfde wijze kan je ook een verdwenen gebouw toevoegen, al zal de geometrie daar een kleiner oppervlak beslaan.
 
 ##Midden-Beemster en De Rijp - het ontstaan van een plaats dateren
 
 Tot dan de havenbuurt van Graft, splitste het rijker wordende De Rijp zich in 1607 af en werd een zelfstandige Banne. Het verderop gelegen Midden-Beemster kon vanzelfsprekend pas ontstaan na de drooglegging van de Beemstermeer.
 
-Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfGeo PiT id als een externe URI (zolang die maar bij ErfGeo bekend is).
+Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfGeo PiT id als een externe URI. Een PiT heeft alleen een id als ie geen URI heeft. De Thesaurus of Geographic Names heeft URIs, dus die gebruiken we hier om te verwijzen.
 
 <table>
 	<tr>
@@ -132,11 +146,15 @@ Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfG
 		<td>hg:Place</td>
 	</tr>
 	<tr>
-		<th>sameHgConcept</th>
-		<td>tgn/1047707</td>
+		<th>periodValidFor</th>
+		<td>existence</td>
 	</tr>
 	<tr>
-		<th>hasBeginning</th>
+		<th>sameHgConcept</th>
+		<td>http://vocab.getty.edu/tgn/1047707</td>
+	</tr>
+	<tr>
+		<th>validSince</th>
 		<td>1607</td>
 	</tr>
 </table>
@@ -157,18 +175,80 @@ Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfG
 		<td>hg:Place</td>
 	</tr>
 	<tr>
+		<th>periodValidFor</th>
+		<td>existence</td>
+	</tr>
+	<tr>
 		<th>sameHgConcept</th>
 		<td>http://vocab.getty.edu/tgn/1047948</td>
 	</tr>
 	<tr>
-		<th>hasBeginning</th>
+		<th>validSince</th>
 		<td>1623</td>
+	</tr>
+</table>
+
+##De naam van een gebouw toevoegen
+
+In principe heeft elk gebouw in Nederland een BAG id. Maar er zijn ook gebouwen met een welluidender naam. Zo staat het pand met BAG id 365100000000350 bekend als 'De Arend', vanwege de arend die de top van het pand siert. Die informatie kunnen we als volgt opnemen:
+
+<table>
+	<tr>
+		<th>id</th>
+		<td>6</td>
+	</tr>
+	<tr>
+		<th>name</th>
+		<td>De Arend</td>
+	</tr>
+	<tr>
+		<th>type</th>
+		<td>hg:Building</td>
+	</tr>
+	<tr>
+		<th>sameHgConcept</th>
+		<td>bag/365100000000350</td>
+	</tr>
+</table>
+
+##Omnummeringen
+
+Elke archivaris weet: een adres is een dynamisch ding. Niet alleen straten veranderen van naam, ook nummeringen willen nogal eens wijzigen. Hier geven we op dat het huidige adres Oosteinde 51, bij de BAG bekend onder id 0365200000001832, tussen 1961 en 2002 bekend stond als nummer 47.
+
+<table>
+	<tr>
+		<th>id</th>
+		<td>8</td>
+	</tr>
+	<tr>
+		<th>name</th>
+		<td>Oosteinde 47</td>
+	</tr>
+	<tr>
+		<th>type</th>
+		<td>hg:Address</td>
+	</tr>
+	<tr>
+		<th>validSince</th>
+		<td>1961</td>
+	</tr>
+	<tr>
+		<th>validUntil</th>
+		<td>2002</td>
+	</tr>
+	<tr>
+		<th>periodValidFor</th>
+		<td>toponym</td>
+	</tr>
+	<tr>
+		<th>sameHgConcept</th>
+		<td>bag/0365200000001832</td>
 	</tr>
 </table>
 
 ##Een gemeentelijke herindeling: Graft-De Rijp 'absordbedBy' Alkmaar
 
-Op 1 januari 2015 is de gemeente Graft-De Rijp opgegaan in de gemeente Alkmaar. Deze gemeentelijke herindeling is blijkbaar nog niet verwerkt in de door ErfGeo gebruikte datasets. Maar we kunnen zelf een PiT aanmaken die deze gemeentelijke herindeling beschrijft.
+Op 1 januari 2015 is de gemeente Graft-De Rijp opgegaan in de gemeente Alkmaar. Deze gemeentelijke herindeling is blijkbaar nog niet verwerkt in alle de door ErfGeo gebruikte datasets. Maar we kunnen zelf een PiT aanmaken die deze gemeentelijke herindeling beschrijft.
 
 Met de sameHgConcept relatie koppelen we de nieuwe PiT aan de bestaande gemeente Graft-De Rijp PiT's, en met de absorbedBy relatie vertellen we dat de gemeente op haar einddatum is opgegaan in Alkmaar.
 
@@ -186,11 +266,11 @@ Met de sameHgConcept relatie koppelen we de nieuwe PiT aan de bestaande gemeente
 		<td>hg:Municipality</td>
 	</tr>
 	<tr>
-		<th>hasBeginning</th>
+		<th>validSince</th>
 		<td>1970</td>
 	</tr>
 	<tr>
-		<th>hasEnd</th>
+		<th>validUntil</th>
 		<td>2015-01-01</td>
 	</tr>
 	<tr>
