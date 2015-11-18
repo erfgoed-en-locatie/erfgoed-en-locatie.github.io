@@ -1,5 +1,5 @@
 ---
-title: Plaatsaanduidingen in metadata standaardiseren
+title: Standaardiseren
 excerpt: Verrijk je metadata door plaats-, gemeente- en straatnamen te standaardiseren
 post_author: Menno den Engelse
 priority: 4
@@ -32,6 +32,8 @@ Als je nou in plaats van de identificatiecode een URI gebruikt, dan kunnen zowel
 
 Aan de URI zie je ook meteen waar de identificatiecode vandaan komt. En is het mogelijk in één veld identificatiecodes van verschillende bronnen te gebruiken zonder in de problemen te komen. TGN levert ook URI's voor plaatsaanduidingen - die voor Bergen is [http://vocab.getty.edu/tgn/7007058](http://vocab.getty.edu/tgn/7007058). Had je alleen de identificatiecode `2759154` gehad en gedacht dat het een TGN code was, dan was je in [West Fork Brush Creek](http://vocab.getty.edu/tgn/2759154) terecht gekomen.
 
+Er zijn datasets die geen URIs bieden, maar wel bruikbare id's. De Basisadministratie Adressen en Gebouwen (BAG) is zo'n dataset.
+
 
 ##Standaardiseren met coördinaten, is dat niet voldoende?
 
@@ -43,25 +45,27 @@ Geo-informatici opperen vaak dat je alleen met geometrie ook alles oplost. Dat i
 Handmatig de juiste URI's vinden kan via de thesaurus van [ErfGeo.nl](http://erfgeo.nl) of rechtstreeks bij de organisatie die de URI's die je wilt gebruiken uitgeeft, [TGN](http://vocab.getty.edu/) of [GeoNames](http://www.geonames.org/) bijvoorbeeld. Let er bij GeoNames op dat een URI als domein `sws.geonames.org` heeft, maar dat Geonames je de informatie toont op domein `www.geonames.org`.
 
 
-Bij grotere hoeveelheden data is het handiger een technisch iemand te vragen de data tegen een [API](https://en.wikipedia.org/wiki/Web_API) aan te houden. GeoNames heeft een API, TGN is als linked open data gepubliceerd en heeft een sparql endpoint. De [ErfGeo API](/tools/api.html) levert TGN, GeoNames en eigen URI's, en kent, hoewel beperkt tot Nederland, bovendien allerlei historische plaatsnaamvarianten.
+Bij grotere hoeveelheden data is het handiger een technisch iemand te vragen de data tegen een [API](https://en.wikipedia.org/wiki/Web_API) aan te houden. GeoNames heeft een API, TGN is als linked open data gepubliceerd en heeft een sparql endpoint. De [ErfGeo API](/tools/api.html) levert TGN, GeoNames en Gemeentegeschiedenis URI's, en levert BAG en NWB id's.
+
+De ErfGeo API levert soms zoveel informatie, dat je door de bomen het bos niet meer ziet. Er is een [ErfGeoProxy](http://www.hicsuntleones.nl/erfgeoproxy/) beschikbaar, die de API aanroept maar alleen de broodnodige informatie doorgeeft, zodat het resultaat bijvoorbeeld bruikbaar is in [OpenRefine](http://openrefine.org/). We hebben een handleiding ErfGeoProxy / OpenRefine beschikbaar.
 
 
-Om ook niet-programmeurs grotere hoeveelheden data in een semi-automatisch proces te laten standaardiseren, heeft Erfgoed & Locatie een [standaardiseertool](/tools/standaardiseren.html) laten ontwikkelen. Deze tool laat je een csv-bestand met te standaardiseren plaatsnamen uploaden, standaardiseert er zelf zoveel mogelijk, en biedt voor de overige gevallen een interface waarin je zelf keuzes kan maken of URI's in kan voeren.
+Om ook niet-programmeurs grotere hoeveelheden data in een semi-automatisch proces te laten standaardiseren, heeft Erfgoed & Locatie een [standaardiseertool](/tools/standaardiseren.html) laten ontwikkelen. Deze tool laat je een csv-bestand met te standaardiseren plaatsnamen uploaden, standaardiseert er zelf zoveel mogelijk, en biedt voor de overige gevallen een interface waarin je zelf keuzes kan maken of URI's in kan voeren. Er is een handleiding voor de standaardiseertool beschikbaar.
 
 
-##Welke URI voor welk type?
+##Welke URI / welk id voor welk type?
 
 In de voorbeelden hierboven betrof het steeds plaatsen en een enkele gemeente. Maar het kan ook om straten, adressen of gebouwen gaan. Of om de departementen die we hier kortstondig in de Franse Tijd hadden. Of om verdwenen plaatsen die TGN of GeoNames nooit gehaald hebben. Welke identifiers of URI's gebruik je in die gevallen?
 
 Voor huidig Nederland kunnen we toe met de 'Big Five': voor plaatsen TGN of GeoNames, voor gemeenten Gemeentegeschiedenis (dat elke gemeente op een eigen URI desgewenst als html, json of rdfxml ontsluit), voor straten het Nationaal Wegenbestand (NWB) en voor gebouwen en adressen de Basisadministratie Adressen en Gebouwen (BAG).
 
-Bij BAG en NWB moet de aantekening gemaakt worden dat deze bronnen helemaal niet als linked data beschikbaar zijn, en dus ook geen URI's hebben.  Die leemte vult ErfGeo op door elke plaatsaanduiding uit elke bron een eigen URI te geven. In een URI als [http://thesaurus.erfgeo.nl/hgconcept/bag.leiden/546010000035758](http://thesaurus.erfgeo.nl/hgconcept/bag.leiden/546010000035758) is het BAG id opgenomen van het adres in kwestie.
+Bij BAG en NWB moet de aantekening gemaakt worden dat deze bronnen helemaal niet als linked data beschikbaar zijn, en dus ook geen URI's hebben.  In dat geval kan een id worden gebruikt. Desgewenst kan het id gebruikt worden om een URI te fabrieken - in [http://thesaurus.erfgeo.nl/pit/?id=bag/546100000040173](http://thesaurus.erfgeo.nl/pit/?id=bag/546100000040173) is het BAG id opgenomen van het gebouw dat Erfgoed Leiden en Omstreken huisvest.
 
-Bij het NWB was het creëren van een URI iets complexer. Het NWB bestaat namelijk niet uit straten, maar uit wegvakken - stukjes straat tussen twee kruisingen. Om de NWB data toch als straten op te kunnen nemen, hebben we de wegvakken van elke straat samengevoegd en een id gegeven als nwb/woonplaats-straatnaam. Dat levert URI's op als [http://thesaurus.erfgeo.nl/hgconcept/nwb/de-rijp-wevershof](http://thesaurus.erfgeo.nl/hgconcept/nwb/de-rijp-wevershof).
+Bij het NWB was het creëren van een URI iets complexer. Het NWB bestaat namelijk niet uit straten, maar uit wegvakken - stukjes straat tussen twee kruisingen. Om de NWB data toch als straten op te kunnen nemen, hebben we de wegvakken van elke straat samengevoegd en een id gegeven als nwb/woonplaats-straatnaam. Dat levert URI's op als [http://thesaurus.erfgeo.nl/pit/?id=nwb/de-rijp-wevershof](http://thesaurus.erfgeo.nl/pit/?id=nwb/de-rijp-wevershof).
 
 Er zijn topografische elementen die niet in de bovenstaande Big Five zijn opgenomen. Door zee verzwolgen dorpen bijvoorbeeld, of, omgekeerd, de drooggemaakte Beemstermeer. De straten die voor de Stopera zijn gesloopt zul je niet terugvinden in het NWB, en het Paleis voor Volksvlijt niet in de BAG.
 
-ErfGeo maakt voor elk topografisch element dat door een opgenomen dataset beschreven wordt een URI aan. Voor de Beemstermeer is dat [http://thesaurus.erfgeo.nl/hgconcept/menno/5](http://thesaurus.erfgeo.nl/hgconcept/menno/5) geworden. Zo krijgen ook bovenstaande voorbeelden, mits opgenomen in ErfGeo, een URI.
+ErfGeo maakt voor elk topografisch element dat door een opgenomen dataset beschreven wordt een URI aan. Voor de Beemstermeer is dat [http://thesaurus.erfgeo.nl/pit/?id=menno/5](http://thesaurus.erfgeo.nl/pit/?id=menno/5) geworden. Zo krijgen ook bovenstaande voorbeelden, mits opgenomen in ErfGeo, een URI.
 
 Nog even op een rij:
 
@@ -69,16 +73,16 @@ Nog even op een rij:
 <tr><th>Type</th><th>URI</th></tr>
 <tr><td>plaats</td><td>TGN, GeoNames</td></tr>
 <tr><td>gemeente</td><td>Gemeentegeschiedenis</td></tr>
-<tr><td>straat</td><td>ErfGeo URI op basis van samengesteld NWB id</td></tr>
-<tr><td>gebouw</td><td>ErfGeo URI op basis van BAG id</td></tr>
-<tr><td>adres</td><td>ErfGeo URI op basis van BAG id</td></tr>
-<tr><td>anders, bijv. verdwenen dorp</td><td>ErfGeo URI</td></tr>
+<tr><td>straat</td><td>BAG id of ErfGeo NWB id</td></tr>
+<tr><td>gebouw</td><td>BAG id</td></tr>
+<tr><td>adres</td><td>BAG id</td></tr>
+<tr><td>anders, bijv. verdwenen dorp</td><td>ErfGeo verdwenen dorp id</td></tr>
 </table>
 
 
 ##Persistentie 
 
-Het gevaar dat altijd op de loer ligt is dat een URI niet persistent kan blijken te zijn. ErfGeo zelf is nog bezig hier een strategie voor te ontwikkelen. Wat moet ErfGeo bijvoorbeeld doen wanneer een nieuwe versie van een dataset wordt aangeleverd en daar elementen uit verdwenen zijn? BAG en NWB willen vooral de huidige stand van zaken beschrijven. Als een straat fysiek verdwijnt, dan zal die ook uit het NWB geschrapt worden.
+Het gevaar dat altijd op de loer ligt is dat een URI niet persistent kan blijken te zijn. ErfGeo zelf is nog bezig hier een strategie voor te ontwikkelen. Wat moet ErfGeo bijvoorbeeld doen wanneer een nieuwe versie van een dataset wordt aangeleverd en daar elementen uit verdwenen zijn? Het NWB bijvoorbeeld wil vooral de huidige stand van zaken beschrijven. Als een straat fysiek verdwijnt, dan is de kans groot dat die ook uit het NWB geschrapt wordt.
 
 
 

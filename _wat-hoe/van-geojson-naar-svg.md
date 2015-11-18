@@ -2,7 +2,7 @@
 title: Vector afbeeldingen op basis van GeoJSON
 excerpt: Geen geoNerd maar vormgever? Er is een manier om zo'n lap geojson om te zetten naar een vectorafbeelding.
 post_author: Menno den Engelse
-priority: 5
+priority: 9
 ---
 
 Als je [een detailpagina in de ErfGeo thesaurus](http://thesaurus.erfgeo.nl/pit/?id=menno/9) bekijkt dan zie je onder het kaartje een blokje [GeoJSON](https://nl.wikipedia.org/wiki/GeoJSON), met daarin een lange lap code met iets dat waarschijnlijk coördinaten zijn. Als je je afvraagt wat je daar in mercatorsnaam mee aan moet, dan is dit artikel voor jou.
