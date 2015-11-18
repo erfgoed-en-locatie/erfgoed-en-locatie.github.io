@@ -20,15 +20,15 @@ Omdat de ErfGeo API zelf zoveel informatie biedt, dat het overzicht in deze exer
 
 We gaan OpenRefine elke plaatsnaam tegen deze proxy houden en kiezen daarvoor in het menuutje bovenin de plaatsnamenkolom `Edit column > Add column by fetching url`.
 
-![add column](imgs/add-column.png)
+![add column](/assets/imgs/add-column.png)
 
 In het dialoogvenstertje dat nu opent geef je de nieuwe kolom een naam en vul je de expressie `"http://www.hicsuntleones.nl/erfgeoproxy/search/?q=" + escape(value,"url") + "&dataset=geonames"` in. Je precieze expressie is natuurlijk afhankelijk van wat je wilt standaardiseren en waar naar toe - je kan in plaats van 'geonames' ook 'tgn' gebruiken.
 
-![add column](imgs/add-column2.png)
+![add column](/assets/imgs/add-column2.png)
 
 Als je op 'OK' klikt begint het proces. Dit kan een tijdje duren - een goed moment om koffie te gaan zetten. Maar als alles goed is gegaan zie je na verloop van tijd een extra kolom met het resultaat van je api aanroep.
 
-![json](imgs/erfgeojson.png)
+![json](/assets/imgs/erfgeojson.png)
 
 ###3) JSON parsen
 
@@ -36,11 +36,11 @@ Het verkregen resultaat bevat, voor zover de api wat met je zoekvraag kon, de ge
 
 Kies in het menuutje bovenin de kolom met het resultaat 'Edit column > Add column based on this column' en vul in het dialoogvenstertje de expressie `value.parseJson().results[0].geonames.uri` in.
 
-![add column](imgs/add-column3.png)
+![add column](/assets/imgs/add-column3.png)
 
 Het resultaat is een extra kolom waar we keurig de GeoNames URIs in terugvinden. Als we de laatste handeling twee keer herhalen met de expressies `value.parseJson().results[0].geonames.geometry.coordinates[1]` en `value.parseJson().results[0].geonames.geometry.coordinates[0]` hebben we ook de lattitude en longitude geëxtraheerd.
 
-![resultaat](imgs/result.png)
+![resultaat](/assets/imgs/result.png)
 
 ###4) data opschonen
 
@@ -50,18 +50,18 @@ Stel dat we alleen een uri, lat en long willen opnemen wanneer er maar één res
 
 Klik dan op `Facet > Numeric Facet` in het menu bovenin de kolom 'count',
 
-![numeric facet](imgs/numeric-facet.png)
+![numeric facet](/assets/imgs/numeric-facet.png)
 
 In de linkerkolom verschijnt nu je facet, die je zo instelt dat alleen records met 2 of meer resultaten worden geselecteerd.
 
-![numeric facet](imgs/numeric-facet-slide.png)
+![numeric facet slide](/assets/imgs/numeric-facet-slide.png)
 
 Pas dan `Edit cells > Common transforms > Blank out cells` toe op de velden long, lat en geonames.
 
-![numeric facet](imgs/blank.png)
+![blank out cells](/assets/imgs/blank.png)
 
 Verwijder de facet, zodat alle records weer te zien zijn. En voilá, Nederland is weer leeg!
 
-![numeric facet](imgs/nederland.png)
+![nl≠vol](/assets/imgs/nederland.png)
 
 Op dezelfde manier kan je natuurlijk ook de BAG id's van gebouwen zoeken, de NWB geometrie van straten, etc.
