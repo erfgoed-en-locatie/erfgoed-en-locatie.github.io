@@ -10,21 +10,21 @@ Wanneer u een lijst met plaatsnamen, straatnamen, adressen of bijvoorbeeld gemee
 
 Drie goede redenen om te standaardiseren worden gegeven in het artikel [Standaardiseren](standaardiseren.html).
 
-##Voorbereiding: een csvbestand maken
+##Voorbereiding: een csv-bestand maken
 
 De Standaardiseertool verwacht een csv-bestand als input dat een kolom met de te standaardiseren toponiemen bevat. Optioneel is een tweede veld dat een 'bredere' term bevat. Als de eerste kolom een straat bevat, kan de tweede een woonplaats bevatten. Of als de eerste kolom een woonplaats bevat, kan de tweede een gemeente of provincie bevatten.
 
-Het csvbestand mag meerdere kolommen bevatten - ik kan me voorstellen dat u er een door u gebruikte identifier in heeft opgenomen. Na standaardisatie download u uw oorspronkelijke csv, aangevuld met de gevraagde standaardiseringen en geomentrieën.
+Het csv-bestand mag meerdere kolommen bevatten - ik kan me voorstellen dat u er een door u gebruikte identifier in heeft opgenomen. Na standaardisatie download u uw oorspronkelijke csv-bestand, aangevuld met de gevraagde standaardiseringen en geomentrieën.
 
 Het is handig uw bestand niet onnodig zwaar te maken: stop er niet meer kolommen in dan nodig en maak toponiemen (of combinaties van toponiemen en een 'breder' toponiem) zo mogelijk uniek.
 
 Vanzelfsprekend worden resultaten beter naarmate de data 'schoner' is - de term `Schoterweg` zal, zeker in combinatie met de bredere term `Haarlem`, meer kans op resultaat geven dan een term als `Schoterweg (ter hoogte van de Kleverlaan)` en de bredere term `Haarlem / Kennemerland`.
 
-Tot slot is het handig als de eerste rij van het csvbestand de kolomnamen bevat.
+Tot slot is het handig als de eerste rij van het csv-bestand de kolomnamen bevat.
 
-##De csv uploaden
+##Het csv-bestand uploaden
 
-Heeft u een account gemaakt en bent u ingelogd, dan kiest u in het menu van de [standaardiseertool](http://standaardiseren.erfgeo.nl/) 'Upload dataset'. U kunt daar aangeven welk scheidingsteken uw csvbestand hanteert om velden te scheiden om de kans op een juiste interpretatie te vergroten. Verder wijst alles zich vanzelf.
+Heeft u een account gemaakt en bent u ingelogd, dan kiest u in het menu van de [standaardiseertool](http://standaardiseren.erfgeo.nl/) 'Upload dataset'. U kunt daar aangeven welk scheidingsteken uw csv-bestand hanteert om velden te scheiden om de kans op een juiste interpretatie te vergroten. Verder wijst alles zich vanzelf.
 
 ##Opties ingeven
 
