@@ -1,7 +1,7 @@
 ---
 title: Soorten PiTs 
 excerpt: PiTs zijn er in allerlei soorten en maten. Hier zetten we alle types voor u op een rijtje.
-priority: 11
+priority: 10
 ---
 
 De ene Plaats in Tijd (Place in Time) is de andere niet en het is van belang om verschillende ordes van grootte (of voorkomen in de tijd) van andere te kunnen onderscheiden. 
