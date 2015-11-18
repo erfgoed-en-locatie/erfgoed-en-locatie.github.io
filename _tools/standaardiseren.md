@@ -9,4 +9,4 @@ Deze tool maakt het batchgewijs standaardiseren van plaatsnamen mogelijk. Voor g
 
 De tool is aangesloten op de [ErfGeo API](/tools/api.html), die veel historische plaatsnaamvarianten kent. Je vindt de tool op [standaardiseren.erfgeo.nl/](http://standaardiseren.erfgeo.nl/)
 
-Er is een [handleiding](/wat-hoe/standaardiseren.html) beschikbaar.
+Er is een [handleiding](/wat-hoe/standaardiseertool.html) beschikbaar.
