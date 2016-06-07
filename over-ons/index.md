@@ -41,7 +41,7 @@ bestond in alfabetische volgorde) uit:
 		<a href="https://www.linkedin.com/profile/view?id=112363629">Rutger van Willigen</a>
 	</div>
 </div>
-De Erfgeo tools zijn in nauw overleg met projectpartner <a href="http://www.cultureelerfgoed.nl">RCE</a>, in persoon van <a href="https://www.linkedin.com/profile/view?id=30552724">Joop Vanderheijden</a>, ontwikkeld en zullen na einde van het project aan de RCE worden overgedragen voor beheer en exploitatie.
+De Erfgeo tools zijn in nauw overleg met projectpartner <a href="http://www.cultureelerfgoed.nl">RCE</a>, in persoon van <a href="https://www.linkedin.com/profile/view?id=30552724">Joop Vanderheiden</a>, ontwikkeld en zullen na einde van het project aan de RCE worden overgedragen voor beheer en exploitatie.
 
 Aanvullende informatie over de formatie van het
 <a href="http://erfgoedenlocatie.nl/projectbeschrijving/projectteam/">E&L team bij DEN</a>,
