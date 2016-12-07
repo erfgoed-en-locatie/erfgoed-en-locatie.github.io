@@ -5,7 +5,7 @@ excerpt: Om uit te leggen wat ErfGeo is, is het wellicht het handigst om te tone
 
 Wat ErfGeo is, laat zich het best uitleggen door de data die het bevat.
 
-##Sircxsee en andere toponiemen
+## Sircxsee en andere toponiemen
 
 In oude bronnen kom je soms plaatsnamen tegen waar je als mens toch even over na moet denken. Cuelborch, dat zal Culemborch zijn. Gaude is Gouda, Haghe Den Haag, Swol Zwolle en Sircxsee, dat is [Zierikzee](http://geothesaurus.nl/hgconcept/tgn/7030107). Voor een computer wordt dat al erg lastig. En dat Weerdt op Valkenswaard slaat, Traiecto op Maastricht, Vorcum op Woudrichem en Buscoducis op Den Bosch, dat is voor zowel mens als machine zonder achterliggende kennis lastig te doorzien.
 
